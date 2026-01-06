@@ -1,0 +1,51 @@
+/* === FEATURES SECTION === */
+.features {
+  background: #f4f6f8;
+  padding: 2.5rem 1rem;
+  border-radius: 10px;
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  text-align: center; /* judul & isi di tengah */
+}
+
+.features .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 2rem;
+}
+
+/* Grid fitur */
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.feature {
+  flex: 1 1 280px;
+  max-width: 320px;
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature .icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2e7d32;
+  margin-bottom: 0.6rem;
+}
+
+.feature p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+}

@@ -1,0 +1,39 @@
+# =========================================================
+# robots.txt for dealerhinoindonesia.com
+# FINAL CLEAN & OPTIMIZED
+# =========================================================
+
+User-agent: *
+
+# --- ALLOW: Static files ---
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /admin/uploads/
+Allow: /favicon.png
+Allow: /favicon.ico
+
+# --- BLOCK: Sensitive directories ---
+Disallow: /admin/
+
+# --- ALLOW important public PHP pages ---
+Allow: /index.php$
+Allow: /artikel.php$
+Allow: /detail_artikel.php$
+Allow: /hino300.php$
+Allow: /hino500.php$
+Allow: /hinobus.php$
+Allow: /product-detail-hino300.php$
+Allow: /product-detail-hino500.php$
+Allow: /product-detail-hinobus.php$
+Allow: /contact.php$
+
+# --- Sitemap ---
+Sitemap: https://dealerhinoindonesia.com/sitemap-index.xml
+Sitemap: https://dealerhinoindonesia.com/sitemap-pages.xml
+Sitemap: https://dealerhinoindonesia.com/sitemap-produk.xml
+Sitemap: https://dealerhinoindonesia.com/sitemap-artikel.php
+
+# =========================================================
+# END OF FILE
+# =========================================================

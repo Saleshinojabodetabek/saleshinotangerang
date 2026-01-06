@@ -1,0 +1,187 @@
+/* === HERO BLOG === */
+.hero-blog {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #1b5e20,
+    #43a047,
+    #81c784
+  ); /* warna saja */
+  color: white;
+  padding: 80px 20px;
+  overflow: hidden;
+}
+
+.hero-blog-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-blog-text {
+  flex: 1 1 400px;
+  z-index: 2;
+}
+
+.hero-blog-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.hero-blog-text p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.btn-blog {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: #ffcc00;
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+.btn-blog:hover {
+  background: #e6b800;
+}
+
+/* Gambar Hero (opsional, bisa kosong) */
+.hero-blog-image {
+  flex: 1 1 400px;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-blog-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Aksen Dot */
+.hero-blog .dot {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.25;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+}
+
+.hero-blog .dot-yellow {
+  background: #ffcc00;
+  top: 20%;
+  left: 60%;
+  animation: float 5s ease-in-out infinite;
+}
+
+.hero-blog .dot-blue {
+  background: #4fc3f7;
+  bottom: 25%;
+  right: 40%;
+  animation: floatX 6s ease-in-out infinite;
+}
+
+/* Animasi Floating */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* ============================
+   RESPONSIVE HERO BLOG
+   ============================ */
+@media (max-width: 1024px) {
+  .hero-blog-text h1 {
+    font-size: 2.4rem;
+  }
+  .hero-blog-text p {
+    font-size: 1.1rem;
+  }
+  .hero-blog-image img {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-blog-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .hero-blog-text {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+  .hero-blog-text h1 {
+    font-size: 2.5rem;
+  }
+  .hero-blog-text p {
+    font-size: 1.1rem;
+  }
+
+  .hero-blog-image {
+    display: none;
+  }
+
+  .btn-blog {
+    margin: 20px auto 0;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-blog {
+    padding: 80px 15px 60px;
+  }
+
+  .hero-blog-text {
+    margin-top: 50px;
+  }
+  .hero-blog-text h1 {
+    font-size: 2.2rem;
+  }
+  .hero-blog-text p {
+    font-size: 1rem;
+  }
+
+  .btn-blog {
+    font-size: 1rem;
+    padding: 10px 22px;
+  }
+}
+/* Tambahkan ini di global CSS */
+html {
+  scroll-behavior: smooth;
+}

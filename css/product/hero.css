@@ -1,0 +1,12 @@
+.hero-product {
+  width: 100%;
+  height: 100vh; /* penuh setinggi layar */
+  overflow: hidden;
+}
+
+.hero-product-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* isi penuh, bisa ada cropping */
+  display: block;
+}

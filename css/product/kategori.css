@@ -1,0 +1,161 @@
+/* ==========================
+   Section Kategori
+========================== */
+.kategori-section {
+  max-width: 1200px;
+  margin: 60px auto 40px; /* jarak atas */
+  padding: 0 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.kategori {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.kategori h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: #222;
+}
+
+.kategori img {
+  height: 38px;
+}
+
+/* ==========================
+   Tabs
+========================== */
+.tabs {
+  display: flex;
+  justify-content: center; /* tengah */
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  position: relative;
+  padding: 14px 32px;
+  background: #f7f7f7;
+  font-weight: 600;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e0e0;
+}
+
+.tab:hover {
+  background: #eeeeee;
+  transform: translateY(-2px);
+}
+
+/* aktif tanpa kotak merah */
+.tab.active {
+  color: #d32f2f;
+  background: transparent; /* hilangkan background merah soft */
+  border-color: transparent; /* hilangkan border merah */
+  box-shadow: none; /* hilangkan shadow khusus aktif */
+}
+
+/* underline animasi */
+.tab.active::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  bottom: -6px;
+  width: 60%;
+  height: 3px;
+  background: #d32f2f;
+  border-radius: 2px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 60%;
+    opacity: 1;
+  }
+}
+
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+  .kategori {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .kategori h1 {
+    font-size: 26px;
+  }
+
+  .kategori img {
+    height: 32px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .tab.active::after {
+    left: 10%;
+    width: 80%;
+  }
+  
+/* ==========================
+   Responsive
+========================== */
+@media (max-width: 768px) {
+  .kategori {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .kategori h1 {
+    font-size: 26px;
+  }
+
+  .kategori img {
+    height: 32px;
+  }
+
+  .tabs {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .tab.active::after {
+    left: 10%;
+    width: 80%;
+  }
+}
