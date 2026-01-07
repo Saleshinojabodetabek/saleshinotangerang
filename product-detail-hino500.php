@@ -63,54 +63,32 @@ while ($row = $res_spec->fetch_assoc()) {
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w, d, s, l, i) {
-      w[l] = w[l] || [];
-      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-      var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-      j.async = true;
-      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-      f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-P7TN9DJW');
-  </script>
-  <!-- End Google Tag Manager -->
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title><?= htmlspecialchars($produk['nama_produk']) ?> | Harga & Spesifikasi Hino 500 Ranger</title>
+
   <meta name="description"
-        content="Dealer Resmi Hino Indonesia - Jual Hino Dutro, Ranger, dan Bus Hino. Dapatkan harga terbaik, promo terbaru 2025, serta layanan kredit dan cicilan untuk seluruh Indonesia, khususnya Jabodetabek dan Jawa Barat. Hubungi Nathan Hino sekarang juga! 0859-7528-7684" />
+  content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>" />
+
   <meta name="keywords"
-        content="harga hino ranger 500 series, hino 500 series, hino dump truck, hino euro 4 terbaru, harga truk hino jabodetabek, spesifikasi hino ranger, brosur hino ranger, hino chassis 500 series" />
-  <meta name="author" content="Nathan Hino" />
-  <title><?= htmlspecialchars($produk['nama_produk']) ?> | Dealer Hino Indonesia</title>
+  content="<?= htmlspecialchars($produk['nama_produk']) ?>, harga hino 500, hino ranger, spesifikasi hino ranger, truk hino euro 4" />
 
-    <!-- Favicon untuk semua browser modern -->
-    <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
-    
-    <!-- Favicon untuk browser lama -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    
-    <!-- Apple Touch Icon (iPhone/iPad) -->
-    <link rel="apple-touch-icon" href="/favicon_512.png">
-    
-    <!-- Google Lighthouse Recommendation -->
-    <meta name="theme-color" content="#ffffff">
+  <meta name="author" content="Sales Hino Tangerang" />
 
-  <link rel="canonical" href="https://dealerhinoindonesia.com/hino500.php" />
+  <link rel="canonical"
+  href="https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>" />
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17738682772">
-  </script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'AW-17738682772');
-  </script>
+  <!-- Favicon untuk semua browser modern -->
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
+  
+  <!-- Favicon untuk browser lama -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <!-- Apple Touch Icon (iPhone/iPad) -->
+  <link rel="apple-touch-icon" href="/favicon_512.png">
+  
+  <!-- Google Lighthouse Recommendation -->
+  <meta name="theme-color" content="#ffffff">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/style.css" />
@@ -142,102 +120,141 @@ while ($row = $res_spec->fetch_assoc()) {
   </style>
 
   <!-- Open Graph -->
-    <meta property="og:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino Ranger 500" />
-    <meta property="og:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>" />
-    <meta property="og:image" content="https://dealerhinoindonesia.com/admin/uploads/<?= $produk['gambar'] ?>" />
-    <meta property="og:url" content="https://dealerhinoindonesia.com/product-detail-hino500?slug=<?= $produk['slug'] ?>" />
-    <meta property="og:type" content="product" />
-    <meta property="og:site_name" content="Dealer Hino Indonesia" />
-
+  <meta property="og:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger" />
+  <meta property="og:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>" />
+  <meta property="og:image" content="https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" />
+  <meta property="og:url" content="https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>" />
+  <meta property="og:type" content="product" />
+  <meta property="og:site_name" content="Sales Hino Tangerang" />
+  <meta property="og:locale" content="id_ID" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dealer Resmi Hino Jakarta | Harga & Promo Hino Terbaru 2025" />
-  <meta name="twitter:description" content="Dealer Resmi Hino Jakarta - Jual Hino Dutro, Ranger, dan Bus Hino dengan harga terbaik dan promo terbaru 2025." />
-  <meta name="twitter:image" content="https://dealerhinoindonesia.com/images/Euro 4 Hino 500.webp" />
-
+  <meta name="twitter:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger" />
+  <meta name="twitter:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>" />
+  <meta name="twitter:image" content="https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" />
     
-    <!--schema-->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Dealer Hino Indonesia",
-      "url": "https://dealerhinoindonesia.com"
-    }
-    </script>
-    
+  <!--schema-->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoDealer",
-      "name": "Dealer Hino Indonesia",
-      "image": "https://dealerhinoindonesia.com/images/Euro 4 Hino 500.webp",
-      "@id": "https://dealerhinoindonesia.com/",
-      "url": "https://dealerhinoindonesia.com/",
-      "telephone": "+62-859-7528-7684",
-      "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Golf Lake Ruko Venice, Jl. Lkr. Luar Barat No.78 Blok B, RT.9/RW.14",
-        "addressLocality": "Jakarta Barat",
-        "addressRegion": "DKI Jakarta",
-        "postalCode": "11730",
-        "addressCountry": "ID"
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "WebSite",
+        "@id": "https://saleshinotangerang.com/#website",
+        "url": "https://saleshinotangerang.com/",
+        "name": "Sales Hino Tangerang",
+        "publisher": {
+          "@id": "https://saleshinotangerang.com/#organization"
+        }
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -6.1305504,
-        "longitude": 106.7279824
+
+      {
+        "@type": "WebPage",
+        "@id": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>#webpage",
+        "url": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>",
+        "name": "<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger",
+        "description": "<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>",
+        "inLanguage": "id-ID",
+        "isPartOf": {
+          "@id": "https://saleshinotangerang.com/#website"
+        },
+        "breadcrumb": {
+          "@id": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>#breadcrumb"
+        }
       },
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "08:00",
-        "closes": "17:00"
-      }],
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61573843992250",
-        "https://www.instagram.com/saleshinojabodetabek",
-        "https://www.tiktok.com/@saleshinoindonesia"
-      ]
-    }
-  </script>
-  
-  <!-- Event snippet for Pembelian conversion page -->
-  <script>
-  gtag('event', 'conversion', {
-      'send_to': 'AW-17738682772/7zEXCMGP3sIbEJSju4pC',
-      'transaction_id': ''
-  });
+
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://saleshinotangerang.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Hino 500 Series",
+            "item": "https://saleshinotangerang.com/hino500"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "<?= htmlspecialchars($produk['nama_produk']) ?>",
+            "item": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>"
+          }
+        ]
+      },
+
+      {
+        "@type": "Product",
+        "@id": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>#product",
+        "name": "<?= htmlspecialchars($produk['nama_produk']) ?>",
+        "image": [
+          "https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>"
+        ],
+        "description": "<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>",
+        "brand": {
+          "@type": "Brand",
+          "name": "Hino"
+        },
+        "category": "Truck",
+        "seller": {
+          "@id": "https://saleshinotangerang.com/#organization"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>",
+          "availability": "https://schema.org/InStock",
+          "itemCondition": "https://schema.org/NewCondition"
+        }
+      },
+
+      {
+        "@type": "Organization",
+        "@id": "https://saleshinotangerang.com/#organization",
+        "name": "Sales Hino Tangerang",
+        "url": "https://saleshinotangerang.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://saleshinotangerang.com/images/logo3.webp"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+62-859-7528-7684",
+          "contactType": "sales",
+          "areaServed": "ID",
+          "availableLanguage": "id"
+        }
+      }
+
+    ]
+  }
   </script>
 
 </head>
 
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7TN9DJW"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-  </noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
   <!-- Header -->
   <header>
     <div class="container header-content navbar">
       <div class="header-title">
-        <a href="https://dealerhinoindonesia.com">
+        <a href="https://saleshinotangerang.com">
           <img src="images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
         </a>
       </div>
       <div class="hamburger-menu">&#9776;</div>
       <nav class="nav links">
-        <a href="https://dealerhinoindonesia.com/">Home</a>
-        <a href="https://dealerhinoindonesia.com/hino300">Hino 300 Series</a>
-        <a href="https://dealerhinoindonesia.com/hino500">Hino 500 Series</a>
-        <a href="https://dealerhinoindonesia.com/hinobus">Hino Bus Series</a>
-        <a href="https://dealerhinoindonesia.com/contact">Contact</a>
-        <a href="https://dealerhinoindonesia.com/artikel">Blog & Artikel</a>
+        <a href="https://saleshinotangerang.com/">Home</a>
+        <a href="https://saleshinotangerang.com/hino300">Hino 300 Series</a>
+        <a href="https://saleshinotangerang.com/hino500">Hino 500 Series</a>
+        <a href="https://saleshinotangerang.com/hinobus">Hino Bus Series</a>
+        <a href="https://saleshinotangerang.com/contact">Contact</a>
+        <a href="https://saleshinotangerang.com/artikel">Blog & Artikel</a>
       </nav>
     </div>
   </header>
@@ -355,7 +372,7 @@ while ($row = $res_spec->fetch_assoc()) {
 
     <!-- Floating Button -->
     <div id="wa-floating-btn">
-      <img src="https://dealerhinoindonesia.com/images/wa.png" alt="wa" />
+      <img src="https://saleshinotangerang.com/images/wa.png" alt="wa" />
       <span>WhatsApp</span>
     </div>
 
@@ -363,9 +380,9 @@ while ($row = $res_spec->fetch_assoc()) {
     <div id="wa-chatbox">
       <div class="wa-header">
         <img 
-          src="https://dealerhinoindonesia.com/images/NT.jpeg" 
+          src="https://saleshinotangerang.com/images/NT.jpeg" 
           class="wa-avatar" 
-          alt="Sales Hino Indonesia"
+          alt="Sales Hino Tangerang"
         />
         <div>
           <h4>Nathan Hino</h4>

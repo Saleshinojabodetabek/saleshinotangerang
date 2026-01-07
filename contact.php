@@ -6,30 +6,14 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-P7TN9DJW');
-    </script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Hubungi Dealer Resmi Hino Indonesia untuk konsultasi harga, promo, dan kredit truk Hino. Tersedia layanan penjualan Dutro, Ranger, dan Bus untuk Jabodetabek & Jawa Barat. Kontak Nathan Hino: 0859-7528-7684." />
-    <meta
-      name="keywords"
-      content="sales hino resmi, kontak dealer hino, hubungi sales hino, nomor sales hino, konsultasi kredit hino, lokasi dealer hino terdekat, bengkel hino terdekat, customer service hino, layanan aftersales hino, informasi harga truk hino"
-    />
-    <meta name="author" content="Nathan Hino" />
-    <title>Hubungi Kami | Harga & Promo Truk Hino Terbaru 2025</title>
+    <meta name="description" content="Hubungi Sales Hino Tangerang untuk konsultasi harga, promo, dan kredit truk Hino Dutro, Ranger, dan Bus. Layanan resmi Jabodetabek & Jawa Barat. Chat Nathan Hino sekarang." />
+    <meta name="keywords" content="kontak sales hino tangerang, sales hino jabodetabek, nomor sales hino resmi, dealer hino tangerang, konsultasi harga truk hino, promo hino terbaru, kredit truk hino" />
+    <meta name="author" content="Sales Hino Tangerang" />
+    <meta name="robots" content="index, follow">
+    <title>Kontak Sales Hino Tangerang | Harga & Promo Truk Hino Resmi</title>
+
     <!-- Favicon untuk semua browser modern -->
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
     
@@ -42,18 +26,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
     <!-- Google Lighthouse Recommendation -->
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="canonical" href="https://dealerhinoindonesia.com/contact" />
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17738682772">
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-17738682772');
-    </script>
+    <link rel="canonical" href="https://saleshinotangerang.com/contact" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -70,122 +43,123 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
     />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Kontak Dealer Hino Indonesia | Jakarta Barat" />
-    <meta property="og:description" content="Hubungi Sales Resmi Hino untuk penawaran harga terbaik, promo terbaru, dan konsultasi pembelian truk Hino." />
-    <meta property="og:image" content="https://dealerhinoindonesia.com/images/contact-hino.webp" />
-    <meta property="og:url" content="https://dealerhinoindonesia.com/contact" />
+    <meta property="og:title" content="Kontak Sales Hino Tangerang | Dealer Resmi Truk Hino" />
+    <meta property="og:description" content="Butuh harga terbaik truk Hino? Hubungi Sales Hino Tangerang untuk promo, kredit, dan konsultasi pembelian resmi." />
+    <meta property="og:image" content="https://saleshinotangerang.com/images/contact-hino.webp" />
+    <meta property="og:url" content="https://saleshinotangerang.com/contact" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Dealer Hino Indonesia" />
-
+    <meta property="og:site_name" content="Sales Hino Tangerang" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dealer Resmi Hino Jakarta | Harga & Promo Truk Hino Terbaru 2025" />
-    <meta
-      name="twitter:description"
-      content="Dealer Resmi Hino Jakarta - Jual Truk Hino Dutro, Ranger, dan Bus Hino dengan harga terbaik dan promo terbaru 2025."
-    />
-    <meta name="twitter:image" content="https://dealerhinoindonesia.com/images/promohino1.webp" />
+    <meta name="twitter:title" content="Kontak Sales Hino Tangerang | Dealer Resmi Truk Hino" />
+    <meta name="twitter:description" content="Hubungi Sales Hino Tangerang untuk promo harga, kredit, dan info truk Hino terbaru." />
+    <meta name="twitter:image" content="https://saleshinotangerang.com/images/contact-hino.webp" />
 
     <!-- Schema.org JSON-LD untuk SEO Dealer Hino -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@graph": [
+
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Dealer Hino Indonesia",
-          "item": "https://dealerhinoindonesia.com/"
+          "@type": "WebSite",
+          "@id": "https://saleshinotangerang.com/#website",
+          "url": "https://saleshinotangerang.com/",
+          "name": "Sales Hino Tangerang",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Sales Hino Tangerang",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://saleshinotangerang.com/favicon_512.png"
+            }
+          }
         },
+
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Contact",
-          "item": "https://dealerhinoindonesia.com/contact"
+          "@type": "AutoDealer",
+          "@id": "https://saleshinotangerang.com/#dealer",
+          "name": "Sales Hino Tangerang",
+          "url": "https://saleshinotangerang.com/",
+          "logo": "https://saleshinotangerang.com/favicon_512.png",
+          "image": "https://saleshinotangerang.com/images/contact-hino.webp",
+          "telephone": "+62-859-7528-7684",
+          "priceRange": "$$$",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Tj. Pura No.9-10, Pegadungan, Kalideres",
+            "addressLocality": "Jakarta Barat",
+            "addressRegion": "DKI Jakarta",
+            "postalCode": "11830",
+            "addressCountry": "ID"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "17:00"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-859-7528-7684",
+            "contactType": "sales",
+            "areaServed": "ID",
+            "availableLanguage": ["id"]
+          }
+        },
+
+        {
+          "@type": "ContactPage",
+          "@id": "https://saleshinotangerang.com/contact#contact",
+          "url": "https://saleshinotangerang.com/contact",
+          "name": "Kontak Sales Hino Tangerang",
+          "description": "Halaman kontak resmi Sales Hino Tangerang untuk konsultasi harga, promo, dan pembelian truk Hino."
+        },
+
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://saleshinotangerang.com/contact#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Sales Hino Tangerang",
+              "item": "https://saleshinotangerang.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kontak",
+              "item": "https://saleshinotangerang.com/contact"
+            }
+          ]
         }
+
       ]
     }
     </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "@id": "https://dealerhinoindonesia.com/contact#contact",
-      "name": "Hubungi Dealer Hino Indonesia",
-      "url": "https://dealerhinoindonesia.com/contact",
-      "description": "Hubungi Dealer Resmi Hino Indonesia untuk informasi harga, promo, dan pembelian truk Hino. Konsultasi gratis dengan Nathan Hino.",
-      "mainEntity": {
-        "@type": "AutoDealer",
-        "@id": "https://dealerhinoindonesia.com/#dealer",
-        "name": "Dealer Hino Indonesia",
-        "telephone": "+62-859-7528-7684",
-        "email": "saleshinojabodetabek@gmail.com",
-        "url": "https://dealerhinoindonesia.com/",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Jl. Tj. Pura.9-10, RT.2/RW.2, Pegadungan, Kec. Kalideres",
-          "addressLocality": "Jakarta Barat",
-          "addressRegion": "DKI Jakarta",
-          "postalCode": "11830",
-          "addressCountry": "ID"
-        }
-      }
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPoint",
-      "telephone": "+62-859-7528-7684",
-      "contactType": "sales",
-      "areaServed": "ID",
-      "availableLanguage": ["id"]
-    }
-    </script>
-
-    
-    <!-- Event snippet for Pembelian conversion page -->
-    <script>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17738682772/7zEXCMGP3sIbEJSju4pC',
-        'transaction_id': ''
-    });
-    </script>
-
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-P7TN9DJW"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <!-- Header -->
     <header>
       <div class="container header-content navbar">
         <div class="header-title">
-          <a href="https://dealerhinoindonesia.com">
+          <a href="https://saleshinotangerang.com">
             <img src="images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
           </a>
         </div>
         <div class="hamburger-menu">&#9776;</div>
         <nav class="nav links">
-          <a href="https://dealerhinoindonesia.com/">Home</a>
-          <a href="https://dealerhinoindonesia.com/hino300">Hino 300 Series</a>
-          <a href="https://dealerhinoindonesia.com/hino500">Hino 500 Series</a>
-          <a href="https://dealerhinoindonesia.com/hinobus">Hino Bus Series</a>
-          <a href="https://dealerhinoindonesia.com/contact">Contact</a>
-          <a href="https://dealerhinoindonesia.com/artikel">Blog & Artikel</a>
+          <a href="https://saleshinotangerang.com/">Home</a>
+          <a href="https://saleshinotangerang.com/hino300">Hino 300 Series</a>
+          <a href="https://saleshinotangerang.com/hino500">Hino 500 Series</a>
+          <a href="https://saleshinotangerang.com/hinobus">Hino Bus Series</a>
+          <a href="https://saleshinotangerang.com/contact">Contact</a>
+          <a href="https://saleshinotangerang.com/artikel">Blog & Artikel</a>
         </nav>
       </div>
     </header>
@@ -269,7 +243,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
 
     <!-- Floating Button -->
     <div id="wa-floating-btn">
-      <img src="https://dealerhinoindonesia.com/images/wa.png" alt="wa" />
+      <img src="https://saleshinotangerang.com/images/wa.png" alt="wa" />
       <span>WhatsApp</span>
     </div>
 
@@ -277,9 +251,9 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
     <div id="wa-chatbox">
       <div class="wa-header">
         <img 
-          src="https://dealerhinoindonesia.com/images/NT.jpeg" 
+          src="https://saleshinotangerang.com/images/NT.jpeg" 
           class="wa-avatar" 
-          alt="Sales Hino Indonesia"
+          alt="Sales Hino Tangerang"
         />
         <div>
           <h4>Nathan Hino</h4>

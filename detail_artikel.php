@@ -1,6 +1,6 @@
 <?php
 $slug = isset($_GET['slug']) ? trim((string)$_GET['slug']) : '';
-$response = json_decode(file_get_contents("https://dealerhinoindonesia.com/admin/api/get_artikel.php?perPage=100"), true);
+$response = json_decode(file_get_contents("https://saleshinotangerang.com/admin/api/get_artikel.php?perPage=100"), true);
 $data = $response['data'] ?? [];
 $artikel = null;
 
@@ -17,48 +17,23 @@ if ($slug !== '' && is_array($data)) {
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-P7TN9DJW');
-    </script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <?php
     $meta_desc = !empty($artikel['isi'])
       ? mb_strimwidth(strip_tags($artikel['isi']), 0, 155, '...')
-      : 'Artikel terbaru seputar Truk Hino, tips, promo, dan berita resmi dari Dealer Hino Indonesia.';
+      : 'Artikel terbaru seputar Truk Hino, tips, promo, dan berita resmi dari Sales Hino Tangerang.';
     ?>
     
     <meta name="description" content="<?= htmlspecialchars($meta_desc) ?>">
     <meta
       name="keywords"
-      content="harga truk hino terbaru, tips memilih truk hino, perbandingan hino dutro dan ranger, review truk hino, update harga hino 2025, berita hino terbaru, artikel hino indonesia, promo hino terbaru, panduan kredit truk hino, cara memilih truk bisnis"
+      content="harga truk hino terbaru, tips memilih truk hino, perbandingan hino dutro dan ranger, review truk hino, update harga hino, berita hino terbaru, artikel hino indonesia, promo hino terbaru, panduan kredit truk hino, cara memilih truk bisnis"
     />
-    <meta name="author" content="Nathan Hino" />
-    <link rel="canonical" href="https://dealerhinoindonesia.com/artikel/<?= urlencode($artikel['slug'] ?? '') ?>">
-    <title><?= htmlspecialchars($artikel['judul'] ?? 'Artikel Tidak Ditemukan') ?> | Dealer Hino Indonesia</title>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17738682772">
-    </script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'AW-17738682772');
-    </script>
+    <meta name="author" content="Sales Hino Tangerang" />
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug'] ?? '') ?>">
+    <title><?= htmlspecialchars($artikel['judul'] ?? 'Artikel Hino') ?> | Sales Hino Tangerang</title>
 
     <!-- Favicon untuk semua browser modern -->
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
@@ -90,115 +65,116 @@ if ($slug !== '' && is_array($data)) {
     <script src="/js/script.js"></script>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="<?= htmlspecialchars($artikel['judul']) ?> | Artikel Hino" />
+    <meta property="og:title" content="<?= htmlspecialchars($artikel['judul']) ?> | Sales Hino Tangerang" />
     <meta property="og:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($artikel['isi']), 0, 150, '...')) ?>" />
-    <meta property="og:image" content="https://dealerhinoindonesia.com/admin/uploads/artikel/<?= $artikel['gambar'] ?>" />
-    <meta property="og:url" content="https://dealerhinoindonesia.com/artikel/<?= urlencode($artikel['slug']) ?>" />
+    <meta property="og:image" content="https://saleshinotangerang.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>" />
+    <meta property="og:url" content="https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>" />
     <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="Dealer Hino Indonesia" />
-
+    <meta property="og:site_name" content="Sales Hino Tangerang" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dealer Resmi Hino Jakarta | Harga & Promo Truk Hino Terbaru 2025" />
-    <meta
-      name="twitter:description"
-      content="Dealer Resmi Hino Jakarta - Jual Truk Hino Dutro, Ranger, dan Bus Hino dengan harga terbaik dan promo terbaru 2025."
-    />
-    <meta name="twitter:image" content="https://dealerhinoindonesia.com/images/promohino1.webp" />
+    <meta name="twitter:title" content="<?= htmlspecialchars($artikel['judul']) ?> | Sales Hino Tangerang" />
+    <meta name="twitter:description" content="<?= htmlspecialchars($meta_desc) ?>" />
+    <meta name="twitter:image" content="https://saleshinotangerang.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>" />
 
     <!-- Schema.org JSON-LD untuk SEO Dealer Hino -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
+      "@graph": [
+
         {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Dealer Hino Indonesia",
-          "item": "https://dealerhinoindonesia.com/"
+          "@type": "WebSite",
+          "@id": "https://saleshinotangerang.com/#website",
+          "url": "https://saleshinotangerang.com/",
+          "name": "Sales Hino Tangerang",
+          "publisher": {
+            "@type": "Organization",
+            "name": "Sales Hino Tangerang",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://saleshinotangerang.com/favicon_512.png"
+            }
+          }
         },
+
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Artikel",
-          "item": "https://dealerhinoindonesia.com/artikel"
+          "@type": "BreadcrumbList",
+          "@id": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Sales Hino Tangerang",
+              "item": "https://saleshinotangerang.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Artikel",
+              "item": "https://saleshinotangerang.com/artikel"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "<?= htmlspecialchars($artikel['judul']) ?>",
+              "item": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>"
+            }
+          ]
         },
+
+        {
+          "@type": "BlogPosting",
+          "@id": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>#article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>"
+          },
+          "headline": "<?= htmlspecialchars($artikel['judul']) ?>",
+          "description": "<?= htmlspecialchars($meta_desc) ?>",
+          "image": [
+            "https://saleshinotangerang.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>"
+          ],
+          "author": {
+            "@type": "Person",
+            "name": "Sales Hino Tangerang"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Sales Hino Tangerang",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://saleshinotangerang.com/favicon_512.png"
+            }
+          },
+          "datePublished": "<?= date('c', strtotime($artikel['tanggal'])) ?>",
+          "dateModified": "<?= date('c', strtotime($artikel['tanggal'])) ?>"
+        }
+
       ]
     }
-    </script>
-    
-    <?php if (!empty($artikel)): ?>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://dealerhinoindonesia.com/artikel/<?= urlencode($artikel['slug']) ?>"
-      },
-      "headline": "<?= htmlspecialchars($artikel['judul']) ?>",
-      "description": "<?= htmlspecialchars($meta_desc) ?>",
-      "image": [
-        "https://dealerhinoindonesia.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>"
-      ],
-      "author": {
-        "@type": "Person",
-        "name": "Nathan Hino"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Dealer Hino Indonesia",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://dealerhinoindonesia.com/favicon_512.png"
-        }
-      },
-      "datePublished": "<?= date('c', strtotime($artikel['tanggal'])) ?>",
-      "dateModified": "<?= date('c', strtotime($artikel['tanggal'])) ?>"
-    }
-    </script>
-    <?php endif; ?>
-
-    <!-- Event snippet for Pembelian conversion page -->
-    <script>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17738682772/7zEXCMGP3sIbEJSju4pC',
-        'transaction_id': ''
-    });
     </script>
 
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-P7TN9DJW"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <!-- Header -->
     <header>
       <div class="container header-content navbar">
         <div class="header-title">
-          <a href="https://dealerhinoindonesia.com">
+          <a href="https://saleshinotangerang.com">
             <img src="/images/logo3.webp" alt="Logo Hino Indonesia" loading="lazy" style="height: 60px" />
           </a>
         </div>
         <div class="hamburger-menu">&#9776;</div>
         <nav class="nav links">
-          <a href="https://dealerhinoindonesia.com/">Home</a>
-          <a href="https://dealerhinoindonesia.com/hino300">Hino 300 Series</a>
-          <a href="https://dealerhinoindonesia.com/hino500">Hino 500 Series</a>
-          <a href="https://dealerhinoindonesia.com/hinobus">Hino Bus Series</a>
-          <a href="https://dealerhinoindonesia.com/contact">Contact</a>
-          <a href="https://dealerhinoindonesia.com/artikel">Blog & Artikel</a>
+          <a href="https://saleshinotangerang.com/">Home</a>
+          <a href="https://saleshinotangerang.com/hino300">Hino 300 Series</a>
+          <a href="https://saleshinotangerang.com/hino500">Hino 500 Series</a>
+          <a href="https://saleshinotangerang.com/hinobus">Hino Bus Series</a>
+          <a href="https://saleshinotangerang.com/contact">Contact</a>
+          <a href="https://saleshinotangerang.com/artikel">Blog & Artikel</a>
         </nav>
       </div>
     </header>
@@ -271,7 +247,7 @@ if ($slug !== '' && is_array($data)) {
               if (!empty($kat)) {
         
                 // URL kategori ke halaman artikel + filter kategori
-                $kat_url = 'https://dealerhinoindonesia.com/artikel?search=&kategori=' . urlencode($kat);
+                $kat_url = 'https://saleshinotangerang.com/artikel?search=&kategori=' . urlencode($kat);
         
                 echo '<li style="margin-bottom: 8px;">';
                 echo '<a href="' . $kat_url . '" 
@@ -329,7 +305,7 @@ if ($slug !== '' && is_array($data)) {
 
     <!-- Floating Button -->
     <div id="wa-floating-btn">
-      <img src="https://dealerhinoindonesia.com/images/wa.png" alt="wa" />
+      <img src="https://saleshinotangerang.com/images/wa.png" alt="wa" />
       <span>WhatsApp</span>
     </div>
 
@@ -337,9 +313,9 @@ if ($slug !== '' && is_array($data)) {
     <div id="wa-chatbox">
       <div class="wa-header">
         <img 
-          src="https://dealerhinoindonesia.com/images/NT.jpeg" 
+          src="https://saleshinotangerang.com/images/NT.jpeg" 
           class="wa-avatar" 
-          alt="Sales Hino Indonesia"
+          alt="Sales Hino Tangerang"
         />
         <div>
           <h4>Nathan Hino</h4>

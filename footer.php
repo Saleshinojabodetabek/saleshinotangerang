@@ -6,7 +6,7 @@
       <div class="footer-container">
         <div class="footer-section footer-logo">
           <img src="/images/logo3.webp" alt="Hino Logo" loading="lazy" />
-          <p>Jangan lewatkan kesempatan terbaik memiliki truk Hino baru! Nathan Hino memberikan promo harga menarik, DP ringan, dan unit ready stock untuk seluruh Indonesia. Klik WhatsApp sekarang untuk penawaran khusus!</p>
+          <p>Jangan lewatkan kesempatan memiliki truk Hino baru dengan penawaran terbaik. Nathan Hino siap memberikan harga kompetitif, DP ringan, dan unit siap kirim ke seluruh Indonesia. Hubungi kami sekarang melalui WhatsApp!</p>
         </div>
         <div class="footer-section footer-address">
           <h3>Alamat</h3>

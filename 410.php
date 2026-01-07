@@ -2,7 +2,7 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>410 – Halaman Dihapus | Dealer Hino Indonesia</title>
+    <title>410 – Halaman Dihapus | Sales Hino Tangerang</title>
     <meta name="robots" content="noindex, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -57,7 +57,7 @@
     <div class="box">
         <h2>410 – Halaman Sudah Dihapus</h2>
         <p>
-            Halaman ini sudah tidak tersedia di situs <strong>Dealer Hino Indonesia</strong><br>
+            Halaman ini sudah tidak tersedia di situs <strong>Sales Hino Tangerang</strong><br>
             atau URL yang diakses terindikasi tidak valid.
         </p>
 

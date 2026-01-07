@@ -8,16 +8,16 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Dealer Resmi Hino Indonesia – Jual Bus Hino berbagai tipe untuk kebutuhan pariwisata, AKAP, AKDP, dan transportasi perusahaan. Dapatkan harga terbaik, promo 2025, serta layanan kredit dan cicilan. Hubungi Nathan Hino sekarang! 0859-7528-7684"
-    />
-    <meta
-      name="keywords"
-      content="harga hino bus terbaru, hino bus series, spesifikasi hino bus, hino bus euro 4, harga chassis hino bus, brosur hino bus, hino microbus, hino bus pariwisata"
-    />
-    <meta name="author" content="Nathan Hino" />
-    <title>Hino Bus Series | Harga & Promo Bus Hino Terbaru 2025</title>
+    <title>Hino Bus Series | Harga & Promo Bus Hino Tangerang</title>
+
+    <meta name="description"
+    content="Dealer Resmi Hino Tangerang – Jual Bus Hino berbagai tipe untuk pariwisata, AKAP, AKDP, dan transportasi perusahaan. Dapatkan harga terbaik, promo resmi, serta layanan kredit dan cicilan. Hubungi Nathan Hino sekarang." />
+
+    <meta name="keywords"
+    content="hino bus series, harga hino bus terbaru, hino bus euro 4, bus hino pariwisata, hino microbus, bus hino akap, harga chassis hino bus" />
+
+    <meta name="author" content="Sales Hino Tangerang" />
+    <meta name="robots" content="index, follow">
 
     <!-- Favicon untuk semua browser modern -->
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
@@ -31,7 +31,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
     <!-- Google Lighthouse Recommendation -->
     <meta name="theme-color" content="#ffffff">
 
-    <link rel="canonical" href="https://dealerhinoindonesia.com/hinobus" />
+    <link rel="canonical" href="https://saleshinotangerang.com/hinobus" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
@@ -70,119 +70,130 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
         font-size: 14px;
       }
     </style>
-
     <!-- Open Graph -->
-    <meta property="og:title" content="Hino Bus Series | Harga, Tipe & Spesifikasi Terbaru" />
-    <meta property="og:description" content="Informasi lengkap Bus Hino — Cocok untuk pariwisata, AKAP, dan kebutuhan transportasi perusahaan." />
-    <meta property="og:image" content="https://dealerhinoindonesia.com/images/Euro 4 Hino Bus.webp" />
-    <meta property="og:url" content="https://dealerhinoindonesia.com/hinobus" />
-    <meta property="og:type" content="product.group" />
-    <meta property="og:site_name" content="Dealer Hino Indonesia" />
-
+    <meta property="og:title" content="Hino Bus Series | Harga & Promo Bus Hino Tangerang" />
+    <meta property="og:description" content="Informasi lengkap Bus Hino untuk pariwisata, AKAP, AKDP, dan transportasi perusahaan. Harga terbaik & promo resmi." />
+    <meta property="og:image" content="https://saleshinotangerang.com/images/Euro 4 Hino Bus.webp" />
+    <meta property="og:url" content="https://saleshinotangerang.com/hinobus" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sales Hino Tangerang" />
+    <meta property="og:locale" content="id_ID" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dealer Resmi Hino Jakarta | Harga & Promo Truk Hino Terbaru 2025" />
-    <meta name="twitter:description" content="Dealer Resmi Hino Jakarta - Jual Truk Hino Dutro, Ranger, dan Bus Hino dengan harga terbaik dan promo terbaru 2025." />
-    <meta name="twitter:image" content="https://dealerhinoindonesia.com/images/Euro 4 Hino Bus.webp" />
+    <meta name="twitter:title" content="Hino Bus Series | Harga & Promo Bus Hino Terbaru" />
+    <meta name="twitter:description" content="Informasi lengkap Bus Hino — Cocok untuk pariwisata, AKAP, dan kebutuhan transportasi perusahaan." />
+    <meta name="twitter:image" content="https://saleshinotangerang.com/images/Euro 4 Hino Bus.webp" />
 
     <!-- Schema.org JSON-LD untuk SEO Dealer Hino -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Dealer Hino Indonesia",
-      "url": "https://dealerhinoindonesia.com"
-    }
-    </script>
-    
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoDealer",
-      "@id": "https://dealerhinoindonesia.com/#dealer",
-      "name": "Dealer Hino Indonesia",
-      "alternateName": "Dealer Resmi Hino Jakarta",
-      "url": "https://dealerhinoindonesia.com/",
-      "image": "https://dealerhinoindonesia.com/images/Euro 4 Hino Bus.webp",
-      "logo": "https://dealerhinoindonesia.com/favicon_512.png",
-      "description": "Dealer Resmi Hino Jakarta Barat - Jual Truk Hino Dutro, Ranger, dan Bus Hino. Dapatkan harga terbaik, promo terbaru 2025, serta layanan kredit dan cicilan untuk seluruh Indonesia, khususnya Jabodetabek dan Jawa Barat. Hubungi Nathan Hino sekarang juga!.",
-      "telephone": "+62-859-7528-7684",
-      "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jl. Tj. Pura.9-10, RT.2/RW.2, Pegadungan, Kec. Kalideres",
-        "addressLocality": "Jakarta Barat",
-        "addressRegion": "DKI Jakarta",
-        "postalCode": "11830",
-        "addressCountry": "ID"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -6.1567,
-        "longitude": 106.6901
-      },
-      "openingHoursSpecification": [
+      "@graph": [
+
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "08:00",
-          "closes": "17:00"
+          "@type": "WebSite",
+          "@id": "https://saleshinotangerang.com/#website",
+          "url": "https://saleshinotangerang.com/",
+          "name": "Sales Hino Tangerang",
+          "publisher": {
+            "@id": "https://saleshinotangerang.com/#organization"
+          }
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "https://saleshinotangerang.com/hinobus#webpage",
+          "url": "https://saleshinotangerang.com/hinobus",
+          "name": "Hino Bus Series | Harga & Promo Bus Hino Tangerang",
+          "description": "Hino Bus Series – Bus Hino tangguh untuk pariwisata, AKAP, AKDP, dan transportasi perusahaan dengan harga terbaik dan promo resmi.",
+          "inLanguage": "id-ID",
+          "isPartOf": {
+            "@id": "https://saleshinotangerang.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://saleshinotangerang.com/hinobus#breadcrumb"
+          }
+        },
+
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://saleshinotangerang.com/hinobus#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://saleshinotangerang.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Produk",
+              "item": "https://saleshinotangerang.com/#products-section"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Hino Bus Series",
+              "item": "https://saleshinotangerang.com/hinobus"
+            }
+          ]
+        },
+
+        {
+          "@type": "CollectionPage",
+          "@id": "https://saleshinotangerang.com/hinobus#collection",
+          "name": "Hino Bus Series",
+          "description": "Daftar lengkap varian Hino Bus Series untuk kebutuhan pariwisata dan transportasi penumpang.",
+          "url": "https://saleshinotangerang.com/hinobus",
+          "mainEntity": {
+            "@type": "ItemList",
+            "name": "Daftar Produk Hino Bus Series",
+            "itemListOrder": "https://schema.org/ItemListOrderAscending"
+          }
+        },
+
+        {
+          "@type": "Organization",
+          "@id": "https://saleshinotangerang.com/#organization",
+          "name": "Sales Hino Tangerang",
+          "url": "https://saleshinotangerang.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://saleshinotangerang.com/images/logo3.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-859-7528-7684",
+            "contactType": "sales",
+            "areaServed": "ID",
+            "availableLanguage": "id"
+          }
         }
-      ],
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61573843992250",
-        "https://www.instagram.com/saleshinojabodetabek",
-        "https://www.tiktok.com/@saleshinoindonesia"
+
       ]
     }
     </script>
-    
-    <!-- Event snippet for Pembelian conversion page -->
-    <script>
-    gtag('event', 'conversion', {
-        'send_to': 'AW-17738682772/7zEXCMGP3sIbEJSju4pC',
-        'transaction_id': ''
-    });
-    </script>
-
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-P7TN9DJW"
-        height="0"
-        width="0"
-        style="display:none;visibility:hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <!-- Header -->
     <header>
       <div class="container header-content navbar">
         <div class="header-title">
-          <a href="https://dealerhinoindonesia.com">
+          <a href="https://saleshinotangerang.com">
             <img src="images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
           </a>
         </div>
         <div class="hamburger-menu">&#9776;</div>
         <nav class="nav links">
-          <a href="https://dealerhinoindonesia.com/">Home</a>
-          <a href="https://dealerhinoindonesia.com/hino300">Hino 300 Series</a>
-          <a href="https://dealerhinoindonesia.com/hino500">Hino 500 Series</a>
-          <a href="https://dealerhinoindonesia.com/hinobus">Hino Bus Series</a>
-          <a href="https://dealerhinoindonesia.com/contact">Contact</a>
-          <a href="https://dealerhinoindonesia.com/artikel">Blog & Artikel</a>
+          <a href="https://saleshinotangerang.com/">Home</a>
+          <a href="https://saleshinotangerang.com/hino300">Hino 300 Series</a>
+          <a href="https://saleshinotangerang.com/hino500">Hino 500 Series</a>
+          <a href="https://saleshinotangerang.com/hinobus">Hino Bus Series</a>
+          <a href="https://saleshinotangerang.com/contact">Contact</a>
+          <a href="https://saleshinotangerang.com/artikel">Blog & Artikel</a>
         </nav>
       </div>
     </header>
@@ -299,7 +310,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
 
     <!-- Floating Button -->
     <div id="wa-floating-btn">
-      <img src="https://dealerhinoindonesia.com/images/wa.png" alt="wa" />
+      <img src="https://saleshinotangerang.com/images/wa.png" alt="wa" />
       <span>WhatsApp</span>
     </div>
 
@@ -307,9 +318,9 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
     <div id="wa-chatbox">
       <div class="wa-header">
         <img 
-          src="https://dealerhinoindonesia.com/images/NT.jpeg" 
+          src="https://saleshinotangerang.com/images/NT.jpeg" 
           class="wa-avatar" 
-          alt="Sales Hino Indonesia"
+          alt="Sales Hino Tangerang"
         />
         <div>
           <h4>Nathan Hino</h4>

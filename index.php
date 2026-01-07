@@ -7,30 +7,13 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, 'script', 'dataLayer', 'GTM-P7TN9DJW');
-    </script>
-    <!-- End Google Tag Manager -->
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Dealer Hino Tangerang resmi dengan sales berpengalaman. Dapatkan harga truk Hino terbaru, promo resmi, dan layanan profesional." />
     <meta
       name="keywords"
-      content="dealer hino, dealer hino tangerang, dealer hino tangerang selatan, promo hino tangerang, dealer hino jakarta, dealer hino jabodetabek, dealer hino jakarta barat, dealer hino jakarta timur, dealer hino jakarta utara, dealer hino jakarta selatan, dealer hino tangerang, dealer hino bekasi, dealer hino depok, dealer hino bogor, dealer hino bandung, dealer resmi hino indonesia, sales hino, promo hino, harga truk hino, jual truk hino, kredit truk hino, cicilan truk hino, hino ready stock, stok unit hino terbaru, harga hino terbaru 2025, promo kredit hino"
+      content="dealer hino, dealer hino tangerang, dealer hino tangerang selatan, promo hino tangerang, dealer hino jakarta, dealer hino jabodetabek, dealer hino jakarta barat, dealer hino jakarta timur, dealer hino jakarta utara, dealer hino jakarta selatan, dealer hino tangerang, dealer hino bekasi, dealer hino depok, dealer hino bogor, dealer hino bandung, dealer resmi hino indonesia, sales hino, promo hino, harga truk hino, jual truk hino, kredit truk hino, cicilan truk hino, hino ready stock, stok unit hino terbaru, harga hino terbaru, promo kredit hino"
     />
-    <meta name="author" content="Nathan Hino" />
-
     <title>Dealer Hino Tangerang | Sales Resmi Hino Tangerang & Jabodetabek</title>
 
     <!-- Favicon untuk semua browser modern -->
@@ -85,74 +68,114 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#006A31" />
 
+    <!-- Schema Json -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
 
-    <!-- Schema WebSite -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Sales Hino Tangerang",
-      "url": "https://saleshinotangerang.com"
-    }
-    </script>
-    
-    <!-- Schema AutoDealer -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoDealer",
-      "@id": "https://saleshinotangerang.com/#dealer",
-      "name": "Sales Hino Tangerang",
-      "alternateName": "Dealer Resmi Hino Tangerang",
-      "url": "https://saleshinotangerang.com/",
-      "image": "https://saleshinotangerang.com/images/promohino1.webp",
-      "logo": "https://saleshinotangerang.com/favicon_512.png",
-      "description": "Dealer Hino Tangerang resmi dengan sales berpengalaman. Dapatkan harga truk Hino terbaru, promo resmi, dan layanan profesional.",
-      "telephone": "+62-859-7528-7684",
-      "priceRange": "$$$",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Jl. Imam Bonjol No.8, RT.001/RW.009, Panunggangan Bar., Kec. Cibodas, Kota Tangerang",
-        "addressLocality": "Tangerang",
-        "addressRegion": "Tangerang Kota",
-        "postalCode": "15138",
-        "addressCountry": "ID"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": -6.2216,
-        "longitude": 106.6212
-      },
-      "openingHoursSpecification": [{
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
-        ],
-        "opens": "08:00",
-        "closes": "17:00"
-      }],
-      "sameAs": [
-        "https://www.facebook.com/profile.php?id=61573843992250",
-        "https://www.instagram.com/saleshinojabodetabek",
-        "https://www.tiktok.com/@saleshinoindonesia"
+        {
+          "@type": "WebSite",
+          "@id": "https://saleshinotangerang.com/#website",
+          "url": "https://saleshinotangerang.com/",
+          "name": "Sales Hino Tangerang",
+          "description": "Dealer Hino Tangerang resmi dengan sales berpengalaman. Harga truk Hino terbaru, promo resmi, dan layanan profesional.",
+          "inLanguage": "id-ID",
+          "publisher": {
+            "@id": "https://saleshinotangerang.com/#organization"
+          }
+        },
+
+        {
+          "@type": "WebPage",
+          "@id": "https://saleshinotangerang.com/#webpage",
+          "url": "https://saleshinotangerang.com/",
+          "name": "Dealer Hino Tangerang | Sales Resmi Hino Tangerang & Jabodetabek",
+          "description": "Dealer Hino Tangerang resmi. Dapatkan harga truk Hino terbaru, promo menarik, serta layanan konsultasi dan pembelian profesional.",
+          "inLanguage": "id-ID",
+          "isPartOf": {
+            "@id": "https://saleshinotangerang.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://saleshinotangerang.com/#mainimage"
+          },
+          "breadcrumb": {
+            "@id": "https://saleshinotangerang.com/#breadcrumb"
+          }
+        },
+
+        {
+          "@type": "Organization",
+          "@id": "https://saleshinotangerang.com/#organization",
+          "name": "Sales Hino Tangerang",
+          "url": "https://saleshinotangerang.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://saleshinotangerang.com/images/logo3.webp",
+            "width": 600,
+            "height": 60
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Tangerang",
+            "addressRegion": "Banten",
+            "addressCountry": "ID"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-859-7528-7684",
+            "contactType": "sales",
+            "areaServed": "ID",
+            "availableLanguage": "id"
+          },
+          "sameAs": [
+            "https://www.facebook.com/profile.php?id=61573843992250",
+            "https://www.instagram.com/saleshinojabodetabek",
+            "https://www.tiktok.com/@saleshinoindonesia",
+            "https://www.youtube.com/@dealerhinojakarta"
+          ]
+        },
+
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://saleshinotangerang.com/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://saleshinotangerang.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Produk",
+              "item": "https://saleshinotangerang.com/#products-section"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Kontak",
+              "item": "https://saleshinotangerang.com/contact"
+            }
+          ]
+        },
+
+        {
+          "@type": "ImageObject",
+          "@id": "https://saleshinotangerang.com/#mainimage",
+          "url": "https://saleshinotangerang.com/images/promohino1.webp",
+          "width": 1200,
+          "height": 630,
+          "caption": "Dealer Hino Tangerang Resmi"
+        }
       ]
     }
     </script>
-    
-    <!-- ✅ Breadcrumb Schema (TAMBAHAN BARU) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Sales Hino Tangerang Resmi",
-        "item": "https://saleshinotangerang.com/"
-      }]
-    }
-    </script>
 
+  </head>
+
+  <body>
     <!-- Header -->
     <header>
       <div class="container header-content navbar">
@@ -209,7 +232,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
               Nathan adalah sales resmi <strong>Dealer Hino Tangerang</strong> yang berpengalaman, profesional, dan siap membantu Anda menemukan solusi kendaraan niaga terbaik. Melayani wilayah Tangerang, Jakarta, dan sekitarnya, Nathan menyediakan berbagai pilihan truk dan bus Hino sesuai kebutuhan bisnis, mulai dari distribusi, logistik, hingga konstruksi. Dengan pelayanan cepat, komunikasi responsif, serta pemahaman produk yang mendalam, Nathan menjadi pilihan tepat bagi Anda yang mencari <strong>dealer Hino terdekat</strong> dengan penawaran terbaik.
               </p>
               <p>
-              Sebagai bagian dari <strong>dealer resmi Hino Indonesia</strong>, komitmen Nathan tidak hanya berhenti pada proses penjualan. Anda akan mendapatkan pendampingan menyeluruh mulai dari konsultasi kebutuhan armada, simulasi kredit fleksibel, hingga layanan purna jual yang responsif dan terpercaya. Percayakan kebutuhan truk dan bus Hino Anda kepada <strong>Nathan – Dealer Hino Jabodetabek</strong>, dan rasakan pengalaman pembelian yang aman, nyaman, serta menguntungkan untuk jangka panjang.
+              Sebagai bagian dari <strong>dealer resmi Hino Tangerang</strong>, komitmen Nathan tidak hanya berhenti pada proses penjualan. Anda akan mendapatkan pendampingan menyeluruh mulai dari konsultasi kebutuhan armada, simulasi kredit fleksibel, hingga layanan purna jual yang responsif dan terpercaya. Percayakan kebutuhan truk dan bus Hino Anda kepada <strong>Nathan – Dealer Hino Jabodetabek</strong>, dan rasakan pengalaman pembelian yang aman, nyaman, serta menguntungkan untuk jangka panjang.
               </p>
               <div class="contact-buttons">
                 <a href="https://wa.me/6285975287684" class="btn whatsapp-btn"><i class="fab fa-whatsapp"></i> +62 859-7528-7684</a>
@@ -230,7 +253,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
           <div class="product">
             <img src="images/Euro 4 Hino 300.webp" alt="Hino 300 Dutro" loading="lazy"/>
             <h3><a href="https://saleshinotangerang.com/hino300" target="_blank" rel="noopener noreferrer">Hino 300 Series (Dutro)</a></h3>
-            <p>Truk ringan dan tangguh, cocok untuk usaha kecil dan menengah.</p>
+            <p>Truk ringan Hino yang irit bahan bakar, mudah perawatan, dan dirancang untuk mendukung kelancaran operasional bisnis harian Anda.</p>
           </div>
           <div class="product">
             <img src="images/Euro 4 Hino 500.webp" alt="Hino 500 Ranger" loading="lazy"/>
@@ -240,7 +263,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
           <div class="product">
             <img src="images/Euro 4 Hino Bus.webp" alt="Hino Bus Series" loading="lazy"/>
             <h3><a href="https://saleshinotangerang.com/hinobus" target="_blank" rel="noopener noreferrer">Hino Bus Series</a></h3>
-            <p>Solusi transportasi penumpang dengan kenyamanan terbaik.</p>
+            <p>Bus Hino yang mengutamakan kenyamanan, keamanan, dan efisiensi untuk layanan transportasi penumpang maupun pariwisata.</p>
           </div>
         </div>
       </section>
@@ -248,14 +271,14 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
       <!-- Section: Promo Utama -->
       <section id="promo-utama" class="promo-section fade-element">
         <div class="promo-text">
-          <h2>Dapatkan Harga dan Penawaran Terbaik Langsung dari Dealer Resmi Hino Indonesia</h2>
+          <h2>Harga Terbaik & Promo Truk Hino Resmi Langsung dari Sales Hino Tangerang</h2>
           <ul>
-            <li>Ingin harga terbaik untuk semua jenis truk Hino?</li>
-            <li>Bingung memilih kendaraan yang tepat untuk bisnis Anda?</li>
-            <li>Butuh pelayanan cepat, ramah, dan profesional?</li>
-            <li>Hubungi Nathan Hino sekarang juga dan dapatkan solusi terbaik!</li>
+            <li>Mencari harga truk Hino paling kompetitif?</li>
+            <li>Butuh rekomendasi unit yang sesuai kebutuhan bisnis?</li>
+            <li>Ingin proses cepat, aman, dan terpercaya?</li>
+            <li>Hubungi Nathan Hino dan dapatkan penawaran terbaik hari ini!</li>
           </ul>
-          <p>Anda berada di tempat yang tepat! Nathan Hino siap membantu Anda mendapatkan truk Hino baru dengan harga kompetitif untuk seluruh Indonesia, <strong>terutama di Jabodetabek dan Jawa Barat</strong>. Pelayanan cepat, terpercaya, dan tanpa ribet menanti Anda!</p>
+          <p>Nathan Hino siap membantu Anda mendapatkan truk Hino baru dengan harga terbaik untuk seluruh Indonesia, khususnya Jabodetabek dan Jawa Barat. Pelayanan profesional, respons cepat, dan tanpa ribet.</p>
           <div class="promo-buttons">
             <a href="https://wa.me/6285975287684" class="btn-primary" target="_blank" rel="noopener noreferrer">Konsultasi Pembelian</a>
           </div>
@@ -269,18 +292,18 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
         <div class="feature-list">
           <div class="feature">
             <div class="icon">🛻</div>
-            <h3>Durabilitas Tinggi</h3>
-            <p>Mesin dan bodi tahan lama untuk penggunaan berat sehari-hari.</p>
+            <h3>Durabilitas Teruji</h3>
+            <p>Dirancang untuk operasional berat dengan mesin tangguh dan daya tahan jangka panjang.</p>
           </div>
           <div class="feature">
             <div class="icon">👥</div>
-            <h3>Pelatihan & Konsultasi</h3>
-            <p>Kami siap memberikan pelatihan dan konsultasi sesuai kebutuhan bisnis Anda.</p>
+            <h3>Konsultasi Profesional</h3>
+            <p>Pendampingan dan rekomendasi unit terbaik sesuai kebutuhan bisnis Anda.</p>
           </div>
           <div class="feature">
             <div class="icon">🔧</div>
             <h3>Servis dan Support</h3>
-            <p>Jaringan servis luas dan suku cadang tersedia di seluruh Indonesia.</p>
+            <p>Didukung jaringan bengkel resmi dan ketersediaan suku cadang di seluruh Indonesia.</p>
           </div>
         </div>
       </section>
@@ -337,7 +360,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
           <img 
               src="https://saleshinotangerang.com/images/NT.jpeg" 
               class="wa-avatar" 
-              alt="Sales Hino Indonesia"
+              alt="Sales Hino Tangerang"
             />
           <div>
             <h4>Nathan Hino</h4>

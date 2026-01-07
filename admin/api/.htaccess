@@ -28,7 +28,7 @@ RewriteRule \.php$ - [F,L]
 
 # ====== Batasi Akses Berdasarkan Referer Domain ======
 # Hanya izinkan permintaan dari domain Anda sendiri
-RewriteCond %{HTTP_REFERER} !^https?://(www\.)?dealerhinoindonesia\.com [NC]
+RewriteCond %{HTTP_REFERER} !^https?://(www\.)?saleshinotangerang\.com [NC]
 RewriteCond %{HTTP_REFERER} !^$  # kosong artinya langsung dari browser (bisa dibolehkan opsional)
 RewriteRule .* - [F,L]
 </IfModule>

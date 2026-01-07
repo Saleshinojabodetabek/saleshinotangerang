@@ -27,7 +27,7 @@ function printUrl($loc, $lastmod, $changefreq = 'monthly', $priority = '0.7') {
 }
 
 // Base domain (benar)
-$base_url = 'https://dealerhinoindonesia.com';
+$base_url = 'https://saleshinotangerang.com';
 
 // 1️⃣ Halaman index artikel (jika memang alamat index Anda artikel.php)
 printUrl($base_url . '/artikel.php', date('Y-m-d'), 'weekly', '0.9');
@@ -36,9 +36,9 @@ try {
     // Koneksi database (sesuaikan credential bila perlu)
     $conn = new mysqli(
         "localhost",
-        "u166903321_dealerhinoidn",
+        "u166903321_saleshinotgr",
         "NatanaelH1no0504@@",
-        "u166903321_dealerhinoidn"
+        "u166903321_saleshinotgr"
     );
     $conn->set_charset('utf8mb4');
 

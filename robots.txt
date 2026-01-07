@@ -1,5 +1,5 @@
 # =========================================================
-# robots.txt for dealerhinoindonesia.com
+# robots.txt for saleshinotangerang.com
 # FINAL CLEAN & OPTIMIZED
 # =========================================================
 
@@ -29,10 +29,10 @@ Allow: /product-detail-hinobus.php$
 Allow: /contact.php$
 
 # --- Sitemap ---
-Sitemap: https://dealerhinoindonesia.com/sitemap-index.xml
-Sitemap: https://dealerhinoindonesia.com/sitemap-pages.xml
-Sitemap: https://dealerhinoindonesia.com/sitemap-produk.xml
-Sitemap: https://dealerhinoindonesia.com/sitemap-artikel.php
+Sitemap: https://saleshinotangerang.com/sitemap-index.xml
+Sitemap: https://saleshinotangerang.com/sitemap-pages.xml
+Sitemap: https://saleshinotangerang.com/sitemap-produk.xml
+Sitemap: https://saleshinotangerang.com/sitemap-artikel.php
 
 # =========================================================
 # END OF FILE
