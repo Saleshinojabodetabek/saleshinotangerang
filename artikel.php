@@ -53,9 +53,23 @@ if ($selectedKategori !== '') $baseUrl .= "kategori=" . urlencode($selectedKateg
     
     <!-- Canonical FINAL FIX -->
     <?php
-    $canonical = "https://saleshinotangerang.com/artikel/";
+    $canonical = "https://saleshinotangerang.com/artikel";
+
+    $params = [];
+
+    if (!empty($selectedKategori)) {
+        $params['kategori'] = $selectedKategori;
+    }
+
+    if ($page > 1) {
+        $params['page'] = $page;
+    }
+
+    if (!empty($params)) {
+        $canonical .= '?' . http_build_query($params);
+    }
     ?>
-    <link rel="canonical" href="<?= $canonical ?>">
+    <link rel="canonical" href="<?= htmlspecialchars($canonical) ?>">
 
     <!--Title-->
     <?php
@@ -110,71 +124,73 @@ if ($selectedKategori !== '') $baseUrl .= "kategori=" . urlencode($selectedKateg
 
 
     <!-- Schema.org JSON-LD untuk SEO Dealer Hino -->
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@graph": [
+    <?php
+    $itemList = [];
+    $pos = 1;
 
-        {
-        "@type": "WebSite",
-        "@id": "https://saleshinotangerang.com/#website",
-        "url": "https://saleshinotangerang.com/",
-        "name": "Sales Hino Tangerang",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Sales Hino Tangerang",
-            "logo": {
-            "@type": "ImageObject",
-            "url": "https://saleshinotangerang.com/favicon_512.png"
-            }
-        }
-        },
+    foreach ($artikel as $row) {
+        if (empty($row['slug'])) continue;
 
-        {
-        "@type": "BreadcrumbList",
-        "@id": "https://saleshinotangerang.com/artikel#breadcrumb",
-        "itemListElement": [
-            {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Sales Hino Tangerang",
-            "item": "https://saleshinotangerang.com/"
-            },
-            {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Artikel",
-            "item": "https://saleshinotangerang.com/artikel"
-            }
-        ]
-        },
-
-        {
-        "@type": "ItemList",
-        "@id": "https://saleshinotangerang.com/artikel#list",
-        "name": "Artikel Truk Hino Terbaru",
-        "itemListOrder": "https://schema.org/ItemListOrderDescending",
-        "numberOfItems": <?= count($artikel) ?>,
-        "itemListElement": [
-            <?php
-            $pos = 1;
-            $items = [];
-            foreach ($artikel as $row) {
-            if (empty($row['slug'])) continue;
-            $items[] = '{
-                "@type": "ListItem",
-                "position": '.$pos++.',
-                "name": "'.htmlspecialchars($row['judul']).'",
-                "url": "https://saleshinotangerang.com/artikel/'.$row['slug'].'"
-            }';
-            }
-            echo implode(",", $items);
-            ?>
-        ]
-        }
-
-    ]
+        $itemList[] = [
+            "@type" => "ListItem",
+            "position" => $pos++,
+            "name" => strip_tags($row['judul']),
+            "url" => "https://saleshinotangerang.com/artikel/" . urlencode(trim($row['slug']))
+        ];
     }
+
+    $schema = [
+        "@context" => "https://schema.org",
+        "@graph" => [
+
+            [
+                "@type" => "WebSite",
+                "@id" => "https://saleshinotangerang.com/#website",
+                "url" => "https://saleshinotangerang.com/",
+                "name" => "Sales Hino Tangerang",
+                "publisher" => [
+                    "@type" => "Organization",
+                    "name" => "Sales Hino Tangerang",
+                    "logo" => [
+                        "@type" => "ImageObject",
+                        "url" => "https://saleshinotangerang.com/favicon_512.png"
+                    ]
+                ]
+            ],
+
+            [
+                "@type" => "BreadcrumbList",
+                "@id" => "https://saleshinotangerang.com/artikel#breadcrumb",
+                "itemListElement" => [
+                    [
+                        "@type" => "ListItem",
+                        "position" => 1,
+                        "name" => "Sales Hino Tangerang",
+                        "item" => "https://saleshinotangerang.com/"
+                    ],
+                    [
+                        "@type" => "ListItem",
+                        "position" => 2,
+                        "name" => "Artikel",
+                        "item" => "https://saleshinotangerang.com/artikel"
+                    ]
+                ]
+            ],
+
+            [
+                "@type" => "ItemList",
+                "@id" => "https://saleshinotangerang.com/artikel#list",
+                "name" => "Artikel Truk Hino Terbaru",
+                "itemListOrder" => "https://schema.org/ItemListOrderDescending",
+                "numberOfItems" => count($itemList),
+                "itemListElement" => $itemList
+            ]
+
+        ]
+    ];
+    ?>
+    <script type="application/ld+json">
+    <?= json_encode($schema, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT); ?>
     </script>
 
 </head>

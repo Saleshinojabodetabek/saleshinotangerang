@@ -6,7 +6,10 @@ $artikel = null;
 
 if ($slug !== '' && is_array($data)) {
   foreach ($data as $item) {
-    if (isset($item['slug']) && $item['slug'] === $slug) {
+    if (
+      isset($item['slug']) &&
+      trim(strtolower($item['slug'])) === trim(strtolower($slug))
+    ) {
       $artikel = $item;
       break;
     }
@@ -32,7 +35,9 @@ if ($slug !== '' && is_array($data)) {
     />
     <meta name="author" content="Sales Hino Tangerang" />
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug'] ?? '') ?>">
+    <?php if ($artikel && !empty($artikel['slug'])): ?>
+    <link rel="canonical" href="https://saleshinotangerang.com/artikel/<?= urlencode(trim($artikel['slug'])) ?>">
+    <?php endif; ?>
     <title><?= htmlspecialchars($artikel['judul'] ?? 'Artikel Hino') ?> | Sales Hino Tangerang</title>
 
     <!-- Favicon untuk semua browser modern -->
@@ -118,7 +123,7 @@ if ($slug !== '' && is_array($data)) {
             {
               "@type": "ListItem",
               "position": 3,
-              "name": "<?= htmlspecialchars($artikel['judul']) ?>",
+              "name": "<?= htmlspecialchars(strip_tags($artikel['judul'])) ?>",
               "item": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>"
             }
           ]
@@ -126,19 +131,18 @@ if ($slug !== '' && is_array($data)) {
 
         {
           "@type": "BlogPosting",
-          "@id": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>#article",
+          "@id": "https://saleshinotangerang.com/artikel/<?= urlencode(trim($artikel['slug'])) ?>#article",
           "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>"
+            "@id": "https://saleshinotangerang.com/artikel/<?= urlencode(trim($artikel['slug'])) ?>"
           },
-          "headline": "<?= htmlspecialchars($artikel['judul']) ?>",
+          "headline": "<?= htmlspecialchars(strip_tags($artikel['judul'])) ?>",
           "description": "<?= htmlspecialchars($meta_desc) ?>",
-          "image": [
-            "https://saleshinotangerang.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>"
-          ],
+          "image": "https://saleshinotangerang.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>",
           "author": {
-            "@type": "Person",
-            "name": "Sales Hino Tangerang"
+            "@type": "Organization",
+            "name": "Sales Hino Tangerang",
+            "url": "https://saleshinotangerang.com/"
           },
           "publisher": {
             "@type": "Organization",
@@ -151,10 +155,7 @@ if ($slug !== '' && is_array($data)) {
           "datePublished": "<?= date('c', strtotime($artikel['tanggal'])) ?>",
           "dateModified": "<?= date('c', strtotime($artikel['tanggal'])) ?>"
         }
-
-      ]
-    }
-    </script>
+        </script>
 
   </head>
 
@@ -196,7 +197,7 @@ if ($slug !== '' && is_array($data)) {
                 style="width: 100%; height: auto; margin-bottom: 20px;"
               />
               <div class="isi-artikel"><?= nl2br($artikel['isi']) ?></div>
-              <a href="artikel.php" class="btn-kembali" style="display:inline-block; margin-top:20px;">Kembali ke Daftar Artikel</a>
+              <a href="/artikel" class="btn-kembali" style="display:inline-block; margin-top:20px;">Kembali ke Daftar Artikel</a>
             <?php else: ?>
               <p>Artikel tidak ditemukan.</p>
             <?php endif; ?>
