@@ -88,10 +88,10 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
           "priceRange": "$$$",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Jl. Tj. Pura No.9-10, Pegadungan, Kalideres",
-            "addressLocality": "Jakarta Barat",
-            "addressRegion": "DKI Jakarta",
-            "postalCode": "11830",
+            "streetAddress": "Jl. Imam Bonjol No.8, RT.001/RW.009",
+            "addressLocality": "Tangerang",
+            "addressRegion": "Kota Tangerang",
+            "postalCode": "15138",
             "addressCountry": "ID"
           },
           "openingHoursSpecification": {

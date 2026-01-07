@@ -117,8 +117,10 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
           },
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Jl. Imam Bonjol No.8, RT.001/RW.009",
             "addressLocality": "Tangerang",
             "addressRegion": "Banten",
+            "postalCode": "15138",
             "addressCountry": "ID"
           },
           "contactPoint": {

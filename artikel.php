@@ -179,12 +179,6 @@ if ($selectedKategori !== '') $baseUrl .= "kategori=" . urlencode($selectedKateg
 
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7TN9DJW" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
     <!-- Header -->
     <header>
         <div class="container header-content navbar">
