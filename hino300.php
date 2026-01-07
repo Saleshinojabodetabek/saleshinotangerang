@@ -185,7 +185,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
     <header>
       <div class="container header-content navbar">
         <div class="header-title">
-          <a href="https://saleshinotangerang.com>
+          <a href="https://saleshinotangerang.com/">
             <img src="images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
           </a>
         </div>
