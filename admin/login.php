@@ -4,7 +4,7 @@ include 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // --- Verifikasi reCAPTCHA ---
-    $recaptchaSecret = "6Lfus0MsAAAAAIPsd45mOQgmFNWjBba9QrQgoaKr";
+    $recaptchaSecret = "6LfjtEMsAAAAAAtfjTdDTMLux5FC_UfKv4iJ4uPR";
     $recaptchaResponse = $_POST['g-recaptcha-response'];
 
     $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptchaSecret&response=$recaptchaResponse");
@@ -54,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <input type="password" name="password" class="form-control" required>
       </div>
       <div class="mb-3">
-        <div class="g-recaptcha" data-sitekey="6Lfus0MsAAAAAGFaVc6ceESkuMLzdqBdifvLejHP"></div>
+        <div class="g-recaptcha" data-sitekey="6LfjtEMsAAAAAHdjP8pSSve0RfXYCP7wZ-lJN_N2"></div>
       </div>
       <button type="submit" class="btn btn-primary w-100">Login</button>
     </form>
