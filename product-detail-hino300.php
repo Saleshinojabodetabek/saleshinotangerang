@@ -91,13 +91,13 @@ while ($row = $res_spec->fetch_assoc()) {
     <meta name="theme-color" content="#ffffff">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/whatsapp.css" />    
-    <link rel="stylesheet" href="css/navbar.css" />
-    <link rel="stylesheet" href="css/product/hero.css" />
-    <link rel="stylesheet" href="css/product/kategori.css" />
-    <link rel="stylesheet" href="css/product/product.css" />
-    <link rel="stylesheet" href="css/product/detail.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/whatsapp.css" />    
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/product/hero.css" />
+    <link rel="stylesheet" href="/css/product/kategori.css" />
+    <link rel="stylesheet" href="/css/product/product.css" />
+    <link rel="stylesheet" href="/css/product/detail.css" />
 
     <!-- Font -->
     <link
@@ -110,7 +110,7 @@ while ($row = $res_spec->fetch_assoc()) {
     />
 
     <!-- JS -->
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 
     <style>
       /* Tambahan CSS untuk search */
@@ -254,39 +254,39 @@ while ($row = $res_spec->fetch_assoc()) {
       <div class="container header-content navbar">
         <div class="header-title">
           <a href="https://saleshinotangerang.com">
-            <img src="images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
+            <img src="/images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
           </a>
         </div>
         <div class="hamburger-menu">&#9776;</div>
         <nav class="nav links">
           <a href="/">Home</a>
-          <a href="hino300">Hino 300 Series</a>
-          <a href="hino500">Hino 500 Series</a>
-          <a href="hinobus">Hino Bus Series</a>
-          <a href="contact">Contact</a>
-          <a href="artikel">Blog & Artikel</a>
+          <a href="/hino300">Hino 300 Series</a>
+          <a href="/hino500">Hino 500 Series</a>
+          <a href="/hinobus">Hino Bus Series</a>
+          <a href="/contact">Contact</a>
+          <a href="/artikel">Blog & Artikel</a>
         </nav>
       </div>
     </header>
 
     <!-- Hero Product -->
     <section class="hero-product">
-      <img src="images/Euro 4 Hino 300.webp" alt="Hino 300 Series" class="hero-product-img" />
+      <img src="/images/Euro 4 Hino 300.webp" alt="Hino 300 Series" class="hero-product-img" />
     </section>
 
     <!-- Produk Pilihan -->
     <div class="kategori-section">
       <div class="kategori">
         <h1>Hino 300 Series</h1>
-        <img src="images/euro4.webp" alt="Euro4 Logo">
+        <img src="/images/euro4.webp" alt="Euro4 Logo">
       </div>
 
       <div class="produk-controls">
         <div class="tabs">
-          <a href="hino300.php#kategori-section" class="tab">ALL</a>
-          <a href="hino300.php#kategori-section" class="tab">CARGO</a>
-          <a href="hino300.php#kategori-section" class="tab">DUMP</a>
-          <a href="hino300.php#kategori-section" class="tab">MIXER</a>
+          <a href="/hino300.php#kategori-section" class="tab">ALL</a>
+          <a href="/hino300.php#kategori-section" class="tab">CARGO</a>
+          <a href="/hino300.php#kategori-section" class="tab">DUMP</a>
+          <a href="/hino300.php#kategori-section" class="tab">MIXER</a>
         </div>
 
         <!-- Search Bar -->
@@ -321,7 +321,7 @@ while ($row = $res_spec->fetch_assoc()) {
               <?php foreach ($karoseri as $k): ?>
                 <div class="karoseri-item">
                   <img
-                    src="admin/uploads/karoseri/<?= htmlspecialchars($k['slug']) ?>.webp"
+                    src="/admin/uploads/karoseri/<?= htmlspecialchars($k['slug']) ?>.webp"
                     alt="<?= htmlspecialchars($k['nama']) ?>"
                   />
                   <p><?= htmlspecialchars($k['nama']) ?></p>
@@ -435,6 +435,18 @@ while ($row = $res_spec->fetch_assoc()) {
   </script>
 
     <?php include 'footer.php'; ?>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hero = document.getElementById("hero-section");
+      if (hero) {
+        const yOffset = -80; // sesuaikan tinggi navbar
+        const y = hero.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    });
+  </script>
+
   </body>
 </html>
 

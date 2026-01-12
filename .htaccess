@@ -147,6 +147,17 @@ RewriteRule ^artikel/([a-zA-Z0-9-]+)/?$ detail_artikel.php?slug=$1 [L,QSA]
 RewriteCond %{REQUEST_URI} ^/artikel/$
 RewriteRule ^artikel/$ /artikel [L,R=301]
 
+RewriteEngine On
+
+# Hino 300 Product Detail
+RewriteRule ^hino300/([a-zA-Z0-9\-]+)/?$ product-detail-hino300.php?slug=$1 [L,QSA]
+
+# Hino 500 Product Detail
+RewriteRule ^hino500/([a-zA-Z0-9\-]+)/?$ product-detail-hino500.php?slug=$1 [L,QSA]
+
+# Hino Bus Product Detail
+RewriteRule ^hinobus/([a-zA-Z0-9\-]+)/?$ product-detail-hinobus.php?slug=$1 [L,QSA]
+
 
 ###############################################
 # END

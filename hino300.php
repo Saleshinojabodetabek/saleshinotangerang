@@ -254,7 +254,7 @@ ob_start('convertImgToWebp'); // aktifkan output buffering
                   <div class="produk-card">
                     <img src="admin/uploads/produk/${p.gambar}" alt="${p.nama_produk}">
                     <h3>${p.nama_produk}</h3>
-                    <a href="product-detail-hino300.php?slug=${p.slug}#hero-section" class="btn-detail">Lihat Detail</a>
+                    <a href="/hino300/${p.slug}" class="btn-detail">Lihat Detail</a>
                   </div>
                 `;
               });

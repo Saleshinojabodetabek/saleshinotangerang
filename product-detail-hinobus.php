@@ -91,13 +91,13 @@ while ($row = $res_spec->fetch_assoc()) {
     <meta name="theme-color" content="#ffffff">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/navbar.css" />
-  <link rel="stylesheet" href="css/whatsapp.css" />
-  <link rel="stylesheet" href="css/product/hero.css" />
-  <link rel="stylesheet" href="css/product/kategori.css" />
-  <link rel="stylesheet" href="css/product/product.css" />
-  <link rel="stylesheet" href="css/product/detail.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/navbar.css" />
+  <link rel="stylesheet" href="/css/whatsapp.css" />
+  <link rel="stylesheet" href="/css/product/hero.css" />
+  <link rel="stylesheet" href="/css/product/kategori.css" />
+  <link rel="stylesheet" href="/css/product/product.css" />
+  <link rel="stylesheet" href="/css/product/detail.css" />
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
@@ -258,39 +258,39 @@ while ($row = $res_spec->fetch_assoc()) {
     <div class="container header-content navbar">
       <div class="header-title">
         <a href="https://saleshinotangerang.com">
-          <img src="images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
+          <img src="/images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
         </a>
       </div>
       <div class="hamburger-menu">&#9776;</div>
       <nav class="nav links">
         <a href="/">Home</a>
-        <a href="hino300">Hino 300 Series</a>
-        <a href="hino500">Hino 500 Series</a>
-        <a href="hinobus">Hino Bus Series</a>
-        <a href="contact">Contact</a>
-        <a href="artikel">Blog & Artikel</a>
+        <a href="/hino300">Hino 300 Series</a>
+        <a href="/hino500">Hino 500 Series</a>
+        <a href="/hinobus">Hino Bus Series</a>
+        <a href="/contact">Contact</a>
+        <a href="/artikel">Blog & Artikel</a>
       </nav>
     </div>
   </header>
 
   <!-- Hero Product -->
   <section class="hero-product">
-    <img src="images/Euro 4 Hino Bus.webp" alt="Hino Bus Series" class="hero-product-img" />
+    <img src="/images/Euro 4 Hino Bus.webp" alt="Hino Bus Series" class="hero-product-img" />
   </section>
 
   <!-- Produk Pilihan -->
   <div class="kategori-section">
     <div class="kategori">
       <h1>Hino Bus Series</h1>
-      <img src="images/euro4.webp" alt="Euro4 Logo">
+      <img src="/images/euro4.webp" alt="Euro4 Logo">
     </div>
 
     <div class="produk-controls">
       <div class="tabs">
-        <a href="hinobus.php#kategori-section" class="tab">ALL</a>
-        <a href="hinobus.php#kategori-section" class="tab">BUS MIKRO</a>
-        <a href="hinobus.php#kategori-section" class="tab">BUS MEDIUM</a>
-        <a href="hinobus.php#kategori-section" class="tab">BUS BESAR</a>
+        <a href="/hinobus.php#kategori-section" class="tab">ALL</a>
+        <a href="/hinobus.php#kategori-section" class="tab">BUS MIKRO</a>
+        <a href="/hinobus.php#kategori-section" class="tab">BUS MEDIUM</a>
+        <a href="/hinobus.php#kategori-section" class="tab">BUS BESAR</a>
       </div>
       <input type="text" id="search-input" placeholder="Cari produk..." />
     </div>
@@ -303,7 +303,7 @@ while ($row = $res_spec->fetch_assoc()) {
       <h1><?= htmlspecialchars($produk['nama_produk']) ?></h1>
     </div>
     <div class="hero-image">
-      <img src="admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" alt="<?= htmlspecialchars($produk['nama_produk']) ?>">
+      <img src="/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" alt="<?= htmlspecialchars($produk['nama_produk']) ?>">
     </div>
   </section>
 
@@ -319,7 +319,7 @@ while ($row = $res_spec->fetch_assoc()) {
           <div class="karoseri-grid">
             <?php foreach ($karoseri as $k): ?>
               <div class="karoseri-item">
-                <img src="admin/uploads/karoseri/<?= htmlspecialchars($k['slug']) ?>.webp" alt="<?= htmlspecialchars($k['nama']) ?>">
+                <img src="/admin/uploads/karoseri/<?= htmlspecialchars($k['slug']) ?>.webp" alt="<?= htmlspecialchars($k['nama']) ?>">
                 <p><?= htmlspecialchars($k['nama']) ?></p>
               </div>
             <?php endforeach; ?>
@@ -425,13 +425,16 @@ while ($row = $res_spec->fetch_assoc()) {
     }
   </script>
 
-
-      <script>
-        // Toggle open/close
-        document.getElementById("wa-button").onclick = function () {
-          document.getElementById("wa-box").classList.toggle("show");
-        };
-      </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hero = document.getElementById("hero-section");
+      if (hero) {
+        const yOffset = -80; // sesuaikan tinggi navbar
+        const y = hero.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    });
+  </script>
 
   <?php include 'footer.php'; ?>
 </body>
