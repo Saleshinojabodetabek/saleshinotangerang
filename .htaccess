@@ -159,6 +159,17 @@ RewriteRule ^hino500/([a-zA-Z0-9\-]+)/?$ product-detail-hino500.php?slug=$1 [L,Q
 RewriteRule ^hinobus/([a-zA-Z0-9\-]+)/?$ product-detail-hinobus.php?slug=$1 [L,QSA]
 
 
+RewriteEngine On
+
+RewriteCond %{QUERY_STRING} slug=([^&]+)
+RewriteRule ^product-detail-hino300$ /hino300/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} slug=([^&]+)
+RewriteRule ^product-detail-hino500$ /hino500/%1? [R=301,L]
+
+RewriteCond %{QUERY_STRING} slug=([^&]+)
+RewriteRule ^product-detail-hinobus$ /hinobus/%1? [R=301,L]
+
 ###############################################
 # END
 ###############################################
