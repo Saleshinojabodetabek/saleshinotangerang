@@ -328,14 +328,6 @@ $gambar_full = !empty($artikel['gambar']) && str_starts_with($artikel['gambar'],
     }
   </script>
 
-
-      <script>
-        // Toggle open/close
-        document.getElementById("wa-button").onclick = function () {
-          document.getElementById("wa-box").classList.toggle("show");
-        };
-      </script>
-
     <?php include 'footer.php'; ?>
 
     <script>
