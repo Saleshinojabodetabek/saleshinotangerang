@@ -1,7 +1,7 @@
 <?php
 include 'admin/config.php';
 
-// Aktifkan webp loader
+// aktifkan webp loader
 include 'webp_loader.php';
 ob_start('convertImgToWebp');
 
@@ -62,310 +62,329 @@ while ($row = $res_spec->fetch_assoc()) {
 
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title><?= htmlspecialchars($produk['nama_produk']) ?> | Harga & Spesifikasi Hino 500 Ranger</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title><?= htmlspecialchars($produk['nama_produk']) ?> | Harga & Spesifikasi Hino 500 Ranger Tangerang</title>
 
-  <meta name="description"
-  content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>" />
+    <meta name="description" content="Harga Hino 500 Ranger Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang." />
 
-  <meta name="keywords"
-  content="<?= htmlspecialchars($produk['nama_produk']) ?>, harga hino 500, hino ranger, spesifikasi hino ranger, truk hino euro 4" />
+    <meta name="keywords"
+    content="<?= htmlspecialchars($produk['nama_produk']) ?>, harga Hino 500, hino ranger, spesifikasi hino ranger, truk hino euro 4" />
 
-  <meta name="author" content="Sales Hino Tangerang" />
+    <meta name="author" content="Sales Hino Tangerang" />
 
-  <link rel="canonical"
-  href="https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>" />
+    <link rel="canonical" href="https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>" />
 
-  <!-- Favicon untuk semua browser modern -->
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
-  
-  <!-- Favicon untuk browser lama -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  
-  <!-- Apple Touch Icon (iPhone/iPad) -->
-  <link rel="apple-touch-icon" href="/favicon_512.png">
-  
-  <!-- Google Lighthouse Recommendation -->
-  <meta name="theme-color" content="#ffffff">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/whatsapp.css" />  
-  <link rel="stylesheet" href="/css/navbar.css" />
-  <link rel="stylesheet" href="/css/product/hero.css" />
-  <link rel="stylesheet" href="/css/product/kategori.css" />
-  <link rel="stylesheet" href="/css/product/product.css" />
-  <link rel="stylesheet" href="/css/product/detail.css" />
-
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
-
-  <style>
-    /* Tambahan CSS untuk search */
-    .produk-controls {
-      text-align: center;
-      margin: 20px 0;
-    }
-    #search-input {
-      width: 100%;
-      max-width: 400px;
-      padding: 12px 16px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-size: 14px;
-    }
-  </style>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger" />
-  <meta property="og:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>" />
-  <meta property="og:image" content="https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" />
-  <meta property="og:url" content="https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>" />
-  <meta property="og:type" content="product" />
-  <meta property="og:site_name" content="Sales Hino Tangerang" />
-  <meta property="og:locale" content="id_ID" />
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger" />
-  <meta name="twitter:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>" />
-  <meta name="twitter:image" content="https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" />
+    <!-- Favicon untuk semua browser modern -->
+    <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
     
-  <!--schema-->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
+    <!-- Favicon untuk browser lama -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Apple Touch Icon (iPhone/iPad) -->
+    <link rel="apple-touch-icon" href="/favicon_512.png">
+    
+    <!-- Google Lighthouse Recommendation -->
+    <meta name="theme-color" content="#ffffff">
 
-      {
-        "@type": "WebSite",
-        "@id": "https://saleshinotangerang.com/#website",
-        "url": "https://saleshinotangerang.com/",
-        "name": "Sales Hino Tangerang",
-        "publisher": {
-          "@id": "https://saleshinotangerang.com/#organization"
-        }
-      },
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/whatsapp.css" />    
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/product/hero.css" />
+    <link rel="stylesheet" href="/css/product/kategori.css" />
+    <link rel="stylesheet" href="/css/product/product.css" />
+    <link rel="stylesheet" href="/css/product/detail.css" />
 
-      {
-        "@type": "WebPage",
-        "@id": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>#webpage",
-        "url": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>",
-        "name": "<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger",
-        "description": "<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>",
-        "inLanguage": "id-ID",
-        "isPartOf": {
-          "@id": "https://saleshinotangerang.com/#website"
-        },
-        "breadcrumb": {
-          "@id": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>#breadcrumb"
-        }
-      },
+    <!-- Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
 
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>#breadcrumb",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://saleshinotangerang.com/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Hino 500 Series",
-            "item": "https://saleshinotangerang.com/hino500"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "<?= htmlspecialchars($produk['nama_produk']) ?>",
-            "item": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>"
-          }
-        ]
-      },
+    <!-- JS -->
+    <script src="/js/script.js"></script>
 
-      {
-        "@type": "Product",
-        "@id": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>#product",
-        "name": "<?= htmlspecialchars($produk['nama_produk']) ?>",
-        "image": [
-          "https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>"
-        ],
-        "description": "<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160, '...')) ?>",
-        "brand": {
-          "@type": "Brand",
-          "name": "Hino"
-        },
-        "category": "Truck",
-        "seller": {
-          "@id": "https://saleshinotangerang.com/#organization"
-        },
-        "offers": {
-          "@type": "Offer",
-          "url": "https://saleshinotangerang.com/product-detail-hino500.php?slug=<?= urlencode($produk['slug']) ?>",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition"
-        }
-      },
-
-      {
-        "@type": "Organization",
-        "@id": "https://saleshinotangerang.com/#organization",
-        "name": "Sales Hino Tangerang",
-        "url": "https://saleshinotangerang.com/",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://saleshinotangerang.com/images/logo3.webp"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+62-859-7528-7684",
-          "contactType": "sales",
-          "areaServed": "ID",
-          "availableLanguage": "id"
-        }
+    <style>
+      /* Tambahan CSS untuk search */
+      .produk-controls {
+        text-align: center;
+        margin: 20px 0;
       }
 
-    ]
-  }
-  </script>
+      #search-input {
+        width: 100%;
+        max-width: 400px;
+        padding: 12px 16px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 14px;
+      }
+    </style>
 
-</head>
+    <!-- Open Graph -->
+    <meta property="og:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger Tangerang" />
+    <meta property="og:description" content="Harga Hino 500 Ranger Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang." />
+    <meta property="og:image" content="https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" />
+    <meta property="og:url" content="https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>" />
+    <meta property="og:type" content="product" />
+    <meta property="og:site_name" content="Sales Hino Tangerang" />
+    <meta property="og:locale" content="id_ID" />
 
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container header-content navbar">
-      <div class="header-title">
-        <a href="https://saleshinotangerang.com">
-          <img src="/images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
-        </a>
-      </div>
-      <div class="hamburger-menu">&#9776;</div>
-      <nav class="nav links">
-        <a href="https://saleshinotangerang.com/">Home</a>
-        <a href="https://saleshinotangerang.com/hino300">Hino 300 Series</a>
-        <a href="https://saleshinotangerang.com/hino500">Hino 500 Series</a>
-        <a href="https://saleshinotangerang.com/hinobus">Hino Bus Series</a>
-        <a href="https://saleshinotangerang.com/contact">Contact</a>
-        <a href="https://saleshinotangerang.com/artikel">Blog & Artikel</a>
-      </nav>
-    </div>
-  </header>
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger Tangerang" />
+    <meta name="twitter:description" content="Harga Hino 500 Ranger Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang." />
+    <meta name="twitter:image" content="https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" />
+    
+    <!-- Schema JSON -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
 
-  <!-- Hero Product — Gambar Penuh -->
-  <section class="hero-product">
-    <img src="/images/Euro 4 Hino 500.webp" alt="Hino 500 Series" class="hero-product-img" />
-  </section>
+        {
+          "@type": "WebSite",
+          "@id": "https://saleshinotangerang.com/#website",
+          "url": "https://saleshinotangerang.com/",
+          "name": "Sales Hino Tangerang",
+          "publisher": {
+            "@id": "https://saleshinotangerang.com/#organization"
+          }
+        },
 
-  <!-- Produk Pilihan -->
-  <div class="kategori-section">
-    <div class="kategori">
-      <h1>Hino 500 Series</h1>
-      <img src="/images/euro4.webp" alt="Euro4 Logo" />
-    </div>
+        {
+          "@type": "WebPage",
+          "@id": "https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>#webpage",
+          "url": "https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>",
+          "name": "<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 500 Ranger",
+          "description": "Harga Hino 500 Ranger Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang.",
+          "inLanguage": "id-ID",
+          "isPartOf": {
+            "@id": "https://saleshinotangerang.com/#website"
+          },
+          "breadcrumb": {
+            "@id": "https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>#breadcrumb"
+          }
+        },
 
-    <div class="produk-controls">
-      <div class="tabs">
-        <a href="/hino500.php#kategori-section" class="tab">ALL</a>
-        <a href="/hino500.php#kategori-section" class="tab">CARGO</a>
-        <a href="/hino500.php#kategori-section" class="tab">DUMP</a>
-        <a href="/hino500.php#kategori-section" class="tab">MIXER</a>
-        <a href="/hino500.php#kategori-section" class="tab">TRACTOR HEAD</a>
-      </div>
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://saleshinotangerang.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Hino 500 Series",
+              "item": "https://saleshinotangerang.com/hino500"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "<?= htmlspecialchars($produk['nama_produk']) ?>",
+              "item": "https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>"
+            }
+          ]
+        },
 
-      <!-- Search Bar -->
-      <input type="text" id="search-input" placeholder="Cari produk..." />
-    </div>
-  </div>
+        {
+          "@type": "Product",
+          "@id": "https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>#product",
+          "name": "<?= htmlspecialchars($produk['nama_produk']) ?>",
+          "image": [
+            "https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>"
+          ],
+          "description": "Harga Hino 500 Ranger Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang.",
+          "brand": {
+            "@type": "Brand",
+            "name": "Hino"
+          },
+          "category": "Truck",
+          "seller": {
+            "@id": "https://saleshinotangerang.com/#organization"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "url": "https://saleshinotangerang.com/hino500/<?= htmlspecialchars($produk['slug']) ?>",
+            "priceCurrency": "IDR",
+            "lowPrice": "0",
+            "highPrice": "0",
+            "offerCount": "1",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+              "@type": "Organization",
+              "name": "Sales Hino Tangerang"
+            }
+          }
+        },
 
-  <!-- Hero Section -->
-  <section id="hero-section" class="hero-diagonal">
-    <div class="hero-text">
-      <h3>TRUK</h3>
-      <h1><?= htmlspecialchars($produk['nama_produk']) ?></h1>
-    </div>
-    <div class="hero-image">
-      <img src="/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>"
-           alt="<?= htmlspecialchars($produk['nama_produk']) ?>" />
-    </div>
-  </section>
+        {
+          "@type": "Organization",
+          "@id": "https://saleshinotangerang.com/#organization",
+          "name": "Sales Hino Tangerang",
+          "url": "https://saleshinotangerang.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://saleshinotangerang.com/images/logo3.webp"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-859-7528-7684",
+            "contactType": "sales",
+            "areaServed": "ID",
+            "availableLanguage": "id"
+          }
+        }
 
-  <!-- Detail Specs -->
-  <section class="detail-specs">
-    <h2>Spesifikasi</h2>
+      ]
+    }
+    </script>
 
-    <!-- Karoseri -->
-    <?php if (!empty($karoseri)): ?>
-      <div class="spec-accordion">
-        <button class="accordion-btn">KAROSERI <span class="icon">+</span></button>
-        <div class="accordion-content">
-          <div class="karoseri-grid">
-            <?php foreach ($karoseri as $k): ?>
-              <div class="karoseri-item">
-                <img src="/admin/uploads/karoseri/<?= htmlspecialchars($k['slug']) ?>.webp"
-                     alt="<?= htmlspecialchars($k['nama']) ?>" />
-                <p><?= htmlspecialchars($k['nama']) ?></p>
-              </div>
-            <?php endforeach; ?>
-          </div>
+
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container header-content navbar">
+        <div class="header-title">
+          <a href="https://saleshinotangerang.com">
+            <img src="/images/logo3.webp" alt="Logo Hino" loading="lazy" style="height: 60px" />
+          </a>
         </div>
+        <div class="hamburger-menu">&#9776;</div>
+        <nav class="nav links">
+          <a href="/">Home</a>
+          <a href="/hino300">Hino 300 Series</a>
+          <a href="/hino500">Hino 500 Series</a>
+          <a href="/hinobus">Hino Bus Series</a>
+          <a href="/contact">Contact</a>
+          <a href="/artikel">Blog & Artikel</a>
+        </nav>
       </div>
-    <?php endif; ?>
+    </header>
 
-    <!-- Spesifikasi Lain -->
-    <?php foreach ($spec_groups as $slug => $meta): 
-      if (!empty($specs[$slug])): ?>
+    <!-- Hero Product -->
+    <section class="hero-product">
+      <img src="/images/Euro 4 Hino 500.webp" alt="Hino 500 Series" class="hero-product-img" />
+    </section>
+
+    <!-- Produk Pilihan -->
+    <div class="kategori-section">
+      <div class="kategori">
+        <h1>Hino 500 Series</h1>
+        <img src="/images/euro4.webp" alt="Euro4 Logo">
+      </div>
+
+      <div class="produk-controls">
+        <div class="tabs">
+          <a href="/hino500#kategori-section" class="tab">ALL</a>
+          <a href="/hino500#kategori-section" class="tab">CARGO</a>
+          <a href="/hino500#kategori-section" class="tab">DUMP</a>
+          <a href="/hino500#kategori-section" class="tab">MIXER</a>
+        </div>
+
+        <!-- Search Bar -->
+        <input type="text" id="search-input" placeholder="Cari produk..." />
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero-section" class="hero-diagonal">
+      <div class="hero-text">
+        <h3>TRUK</h3>
+        <h1><?= htmlspecialchars($produk['nama_produk']) ?></h1>
+      </div>
+      <div class="hero-image">
+        <img
+          src="/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>"
+          alt="<?= htmlspecialchars($produk['nama_produk']) ?>"
+        />
+      </div>
+    </section>
+
+    <!-- Detail Specs -->
+    <section class="detail-specs">
+      <h2>Spesifikasi</h2>
+
+      <!-- Karoseri -->
+      <?php if (!empty($karoseri)): ?>
         <div class="spec-accordion">
-          <button class="accordion-btn">
-            <?= htmlspecialchars($meta['label']) ?> <span class="icon">+</span>
-          </button>
+          <button class="accordion-btn">KAROSERI <span class="icon">+</span></button>
           <div class="accordion-content">
-            <table class="spec-table">
-              <tbody>
-                <?php foreach ($specs[$slug] as $r): ?>
-                  <tr>
-                    <td class="spec-label"><?= htmlspecialchars($r['label']) ?></td>
-                    <td class="spec-value"><?= htmlspecialchars($r['nilai']) ?></td>
-                  </tr>
-                <?php endforeach; ?>
-              </tbody>
-            </table>
+            <div class="karoseri-grid">
+              <?php foreach ($karoseri as $k): ?>
+                <div class="karoseri-item">
+                  <img
+                    src="/admin/uploads/karoseri/<?= htmlspecialchars($k['slug']) ?>.webp"
+                    alt="<?= htmlspecialchars($k['nama']) ?>"
+                  />
+                  <p><?= htmlspecialchars($k['nama']) ?></p>
+                </div>
+              <?php endforeach; ?>
+            </div>
           </div>
         </div>
-    <?php endif; endforeach; ?>
-  </section>
+      <?php endif; ?>
 
-  <!-- Back to Top Button -->
-  <button id="back-to-top" title="Kembali ke atas">&#8679;</button>
+      <!-- Spesifikasi Lain -->
+      <?php foreach ($spec_groups as $slug => $meta):
+        if (!empty($specs[$slug])): ?>
+          <div class="spec-accordion">
+            <button class="accordion-btn">
+              <?= htmlspecialchars($meta['label']) ?> <span class="icon">+</span>
+            </button>
+            <div class="accordion-content">
+              <table class="spec-table">
+                <tbody>
+                  <?php foreach ($specs[$slug] as $r): ?>
+                    <tr>
+                      <td class="spec-label"><?= htmlspecialchars($r['label']) ?></td>
+                      <td class="spec-value"><?= htmlspecialchars($r['nilai']) ?></td>
+                    </tr>
+                  <?php endforeach; ?>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        <?php endif;
+      endforeach; ?>
+    </section>
 
-  <!-- JS -->
-  <script>
-    document.querySelectorAll('.accordion-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.classList.toggle('active');
-        let content = btn.nextElementSibling;
-        content.style.display = content.style.display === "block" ? "none" : "block";
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Kembali ke atas">&#8679;</button>
+
+    <!-- JS -->
+    <script>
+      // Accordion
+      document.querySelectorAll('.accordion-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          btn.classList.toggle('active');
+          const content = btn.nextElementSibling;
+          content.style.display = content.style.display === "block" ? "none" : "block";
+        });
       });
-    });
 
-    // Back to Top Button
-    const backToTopBtn = document.getElementById("back-to-top");
-
-    window.addEventListener("scroll", () => {
-      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+      // Back to Top
+      const backToTopBtn = document.getElementById("back-to-top");
+      window.addEventListener("scroll", () => {
+        backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+      });
+      backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    </script>
 
   <!-- WhatsApp Floating Widget -->
   <div id="wa-widget-container">
@@ -421,13 +440,7 @@ while ($row = $res_spec->fetch_assoc()) {
     }
   </script>
 
-
-      <script>
-        // Toggle open/close
-        document.getElementById("wa-button").onclick = function () {
-          document.getElementById("wa-box").classList.toggle("show");
-        };
-      </script>
+    <?php include 'footer.php'; ?>
 
     <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -440,7 +453,7 @@ while ($row = $res_spec->fetch_assoc()) {
     });
   </script>
 
-  <?php include 'footer.php'; ?>
-</body>
+  </body>
 </html>
+
 <?php ob_end_flush(); ?>

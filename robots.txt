@@ -23,9 +23,6 @@ Allow: /detail_artikel.php$
 Allow: /hino300.php$
 Allow: /hino500.php$
 Allow: /hinobus.php$
-Allow: /product-detail-hino300.php$
-Allow: /product-detail-hino500.php$
-Allow: /product-detail-hinobus.php$
 Allow: /contact.php$
 
 # --- Sitemap ---

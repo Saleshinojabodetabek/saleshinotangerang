@@ -65,18 +65,16 @@ while ($row = $res_spec->fetch_assoc()) {
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title><?= htmlspecialchars($produk['nama_produk']) ?> | Harga & Spesifikasi Hino 300 Dutro</title>
+    <title><?= htmlspecialchars($produk['nama_produk']) ?> | Harga & Spesifikasi Hino 300 Dutro Tangerang</title>
 
-    <meta name="description"
-    content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160)) ?>" />
+    <meta name="description" content="Harga Hino 300 Dutro Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang." />
 
     <meta name="keywords"
     content="<?= htmlspecialchars($produk['nama_produk']) ?>, harga hino 300, hino dutro, spesifikasi hino dutro, truk hino euro 4" />
 
     <meta name="author" content="Sales Hino Tangerang" />
 
-    <link rel="canonical"
-    href="https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>" />
+    <link rel="canonical" href="https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>" />
 
     <!-- Favicon untuk semua browser modern -->
     <link rel="icon" type="image/png" sizes="512x512" href="/favicon_512.png">
@@ -130,20 +128,20 @@ while ($row = $res_spec->fetch_assoc()) {
     </style>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 300 Dutro" />
-    <meta property="og:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160)) ?>" />
+    <meta property="og:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 300 Dutro Tangerang" />
+    <meta property="og:description" content="Harga Hino 300 Dutro Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang." />
     <meta property="og:image" content="https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" />
-    <meta property="og:url" content="https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>" />
+    <meta property="og:url" content="https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>" />
     <meta property="og:type" content="product" />
     <meta property="og:site_name" content="Sales Hino Tangerang" />
     <meta property="og:locale" content="id_ID" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 300 Dutro" />
-    <meta name="twitter:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160)) ?>" />
+    <meta name="twitter:title" content="<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 300 Dutro Tangerang" />
+    <meta name="twitter:description" content="Harga Hino 300 Dutro Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang." />
     <meta name="twitter:image" content="https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>" />
-
+    
     <!-- Schema JSON -->
     <script type="application/ld+json">
     {
@@ -162,22 +160,22 @@ while ($row = $res_spec->fetch_assoc()) {
 
         {
           "@type": "WebPage",
-          "@id": "https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>#webpage",
-          "url": "https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>",
+          "@id": "https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>#webpage",
+          "url": "https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>",
           "name": "<?= htmlspecialchars($produk['nama_produk']) ?> | Hino 300 Dutro",
-          "description": "<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160)) ?>",
+          "description": "Harga Hino 300 Dutro Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang.",
           "inLanguage": "id-ID",
           "isPartOf": {
             "@id": "https://saleshinotangerang.com/#website"
           },
           "breadcrumb": {
-            "@id": "https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>#breadcrumb"
+            "@id": "https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>#breadcrumb"
           }
         },
 
         {
           "@type": "BreadcrumbList",
-          "@id": "https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>#breadcrumb",
+          "@id": "https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>#breadcrumb",
           "itemListElement": [
             {
               "@type": "ListItem",
@@ -195,19 +193,19 @@ while ($row = $res_spec->fetch_assoc()) {
               "@type": "ListItem",
               "position": 3,
               "name": "<?= htmlspecialchars($produk['nama_produk']) ?>",
-              "item": "https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>"
+              "item": "https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>"
             }
           ]
         },
 
         {
           "@type": "Product",
-          "@id": "https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>#product",
+          "@id": "https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>#product",
           "name": "<?= htmlspecialchars($produk['nama_produk']) ?>",
           "image": [
             "https://saleshinotangerang.com/admin/uploads/produk/<?= htmlspecialchars($produk['gambar']) ?>"
           ],
-          "description": "<?= htmlspecialchars(mb_strimwidth(strip_tags($produk['deskripsi']), 0, 160)) ?>",
+          "description": "Harga Hino 300 Dutro Tangerang. Spesifikasi lengkap, pilihan karoseri, dan promo terbaik dari Sales Hino Tangerang.",
           "brand": {
             "@type": "Brand",
             "name": "Hino"
@@ -217,10 +215,17 @@ while ($row = $res_spec->fetch_assoc()) {
             "@id": "https://saleshinotangerang.com/#organization"
           },
           "offers": {
-            "@type": "Offer",
-            "url": "https://saleshinotangerang.com/product-detail-hino300.php?slug=<?= urlencode($produk['slug']) ?>",
+            "@type": "AggregateOffer",
+            "url": "https://saleshinotangerang.com/hino300/<?= htmlspecialchars($produk['slug']) ?>",
+            "priceCurrency": "IDR",
+            "lowPrice": "0",
+            "highPrice": "0",
+            "offerCount": "1",
             "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition"
+            "seller": {
+              "@type": "Organization",
+              "name": "Sales Hino Tangerang"
+            }
           }
         },
 
@@ -245,6 +250,7 @@ while ($row = $res_spec->fetch_assoc()) {
       ]
     }
     </script>
+
 
   </head>
 
@@ -283,10 +289,10 @@ while ($row = $res_spec->fetch_assoc()) {
 
       <div class="produk-controls">
         <div class="tabs">
-          <a href="/hino300.php#kategori-section" class="tab">ALL</a>
-          <a href="/hino300.php#kategori-section" class="tab">CARGO</a>
-          <a href="/hino300.php#kategori-section" class="tab">DUMP</a>
-          <a href="/hino300.php#kategori-section" class="tab">MIXER</a>
+          <a href="/hino300#kategori-section" class="tab">ALL</a>
+          <a href="/hino300#kategori-section" class="tab">CARGO</a>
+          <a href="/hino300#kategori-section" class="tab">DUMP</a>
+          <a href="/hino300#kategori-section" class="tab">MIXER</a>
         </div>
 
         <!-- Search Bar -->
