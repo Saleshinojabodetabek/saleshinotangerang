@@ -1,21 +1,28 @@
 <?php
-$slug = isset($_GET['slug']) ? trim((string)$_GET['slug']) : '';
-$response = json_decode(file_get_contents("https://saleshinotangerang.com/admin/api/get_artikel.php?perPage=100"), true);
+$slug = isset($_GET['slug']) ? trim($_GET['slug']) : '';
+
+$response = @file_get_contents("https://saleshinotangerang.com/admin/api/get_artikel.php?perPage=100");
+$response = json_decode($response, true);
+
 $data = $response['data'] ?? [];
 $artikel = null;
 
-if ($slug !== '' && is_array($data)) {
-  foreach ($data as $item) {
-    if (
-      isset($item['slug']) &&
-      trim(strtolower($item['slug'])) === trim(strtolower($slug))
-    ) {
-      $artikel = $item;
-      break;
-    }
+foreach ($data as $item) {
+  if (!empty($item['slug']) && strtolower(trim($item['slug'])) === strtolower($slug)) {
+    $artikel = $item;
+    break;
   }
 }
+
+$meta_desc = !empty($artikel['isi'])
+  ? mb_strimwidth(strip_tags($artikel['isi']), 0, 155)
+  : 'Artikel terbaru seputar Truk Hino, promo, tips, dan berita resmi Sales Hino Tangerang.';
+
+$gambar_full = !empty($artikel['gambar']) && str_starts_with($artikel['gambar'], 'http')
+  ? $artikel['gambar']
+  : 'https://saleshinotangerang.com/admin/uploads/artikel/' . ($artikel['gambar'] ?? '');
 ?>
+
 
 <!DOCTYPE html>
 <html lang="id">
@@ -36,7 +43,7 @@ if ($slug !== '' && is_array($data)) {
     <meta name="author" content="Sales Hino Tangerang" />
     <meta name="robots" content="index, follow">
     <?php if ($artikel && !empty($artikel['slug'])): ?>
-    <link rel="canonical" href="https://saleshinotangerang.com/artikel/<?= urlencode(trim($artikel['slug'])) ?>">
+    <link rel="canonical" href="https://saleshinotangerang.com/artikel/<?= urlencode($slug) ?>">
     <?php endif; ?>
     <title><?= htmlspecialchars($artikel['judul'] ?? 'Artikel Hino') ?> | Sales Hino Tangerang</title>
 
@@ -70,80 +77,44 @@ if ($slug !== '' && is_array($data)) {
     <script src="/js/script.js"></script>
 
     <!-- Open Graph -->
-    <meta property="og:title" content="<?= htmlspecialchars($artikel['judul']) ?> | Sales Hino Tangerang" />
-    <meta property="og:description" content="<?= htmlspecialchars(mb_strimwidth(strip_tags($artikel['isi']), 0, 150, '...')) ?>" />
-    <meta property="og:image" content="https://saleshinotangerang.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>" />
-    <meta property="og:url" content="https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>" />
-    <meta property="og:type" content="article" />
+    <meta property="og:title" content="<?= htmlspecialchars($artikel['judul']) ?> | Sales Hino Tangerang">
+    <meta property="og:description" content="<?= htmlspecialchars($meta_desc) ?>">
+    <meta property="og:image" content="<?= htmlspecialchars($gambar_full) ?>">
+    <meta property="og:url" content="https://saleshinotangerang.com/artikel/<?= urlencode($slug) ?>">
+    <meta property="og:type" content="article">
     <meta property="og:site_name" content="Sales Hino Tangerang" />
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="<?= htmlspecialchars($artikel['judul']) ?> | Sales Hino Tangerang" />
-    <meta name="twitter:description" content="<?= htmlspecialchars($meta_desc) ?>" />
-    <meta name="twitter:image" content="https://saleshinotangerang.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="<?= htmlspecialchars($artikel['judul']) ?>">
+    <meta name="twitter:description" content="<?= htmlspecialchars($meta_desc) ?>">
+    <meta name="twitter:image" content="<?= htmlspecialchars($gambar_full) ?>">
 
     <!-- Schema.org JSON-LD untuk SEO Dealer Hino -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
-
         {
           "@type": "WebSite",
           "@id": "https://saleshinotangerang.com/#website",
           "url": "https://saleshinotangerang.com/",
-          "name": "Sales Hino Tangerang",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Sales Hino Tangerang",
-            "logo": {
-              "@type": "ImageObject",
-              "url": "https://saleshinotangerang.com/favicon_512.png"
-            }
-          }
+          "name": "Sales Hino Tangerang"
         },
-
         {
           "@type": "BreadcrumbList",
-          "@id": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>#breadcrumb",
           "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Sales Hino Tangerang",
-              "item": "https://saleshinotangerang.com/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "Artikel",
-              "item": "https://saleshinotangerang.com/artikel"
-            },
-            {
-              "@type": "ListItem",
-              "position": 3,
-              "name": "<?= htmlspecialchars(strip_tags($artikel['judul'])) ?>",
-              "item": "https://saleshinotangerang.com/artikel/<?= urlencode($artikel['slug']) ?>"
-            }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saleshinotangerang.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Artikel", "item": "https://saleshinotangerang.com/artikel" },
+            { "@type": "ListItem", "position": 3, "name": "<?= htmlspecialchars($artikel['judul']) ?>", "item": "https://saleshinotangerang.com/artikel/<?= urlencode($slug) ?>" }
           ]
         },
-
         {
           "@type": "BlogPosting",
-          "@id": "https://saleshinotangerang.com/artikel/<?= urlencode(trim($artikel['slug'])) ?>#article",
-          "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://saleshinotangerang.com/artikel/<?= urlencode(trim($artikel['slug'])) ?>"
-          },
-          "headline": "<?= htmlspecialchars(strip_tags($artikel['judul'])) ?>",
+          "headline": "<?= htmlspecialchars($artikel['judul']) ?>",
+          "image": "<?= htmlspecialchars($gambar_full) ?>",
           "description": "<?= htmlspecialchars($meta_desc) ?>",
-          "image": "https://saleshinotangerang.com/admin/uploads/artikel/<?= htmlspecialchars($artikel['gambar']) ?>",
-          "author": {
-            "@type": "Organization",
-            "name": "Sales Hino Tangerang",
-            "url": "https://saleshinotangerang.com/"
-          },
+          "author": { "@type": "Organization", "name": "Sales Hino Tangerang" },
           "publisher": {
             "@type": "Organization",
             "name": "Sales Hino Tangerang",
@@ -152,10 +123,12 @@ if ($slug !== '' && is_array($data)) {
               "url": "https://saleshinotangerang.com/favicon_512.png"
             }
           },
-          "datePublished": "<?= date('c', strtotime($artikel['tanggal'])) ?>",
-          "dateModified": "<?= date('c', strtotime($artikel['tanggal'])) ?>"
+          "datePublished": "<?= date('c', strtotime($artikel['tanggal'] ?? 'now')) ?>"
         }
-        </script>
+      ]
+    }
+    </script>
+
 
   </head>
 
